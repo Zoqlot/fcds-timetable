@@ -84,8 +84,11 @@ export default function CourseBrowser({
     if (source.includes("university") && source.includes("elective")) {
       return { key: "university_elective", title: "University Elective", arabic: "اختياري", order: 1 };
     }
+    if (source.includes("elective") || source.includes("optional")) {
+      return { key: "elective", title: "Elective", arabic: "اختياري", order: 1 };
+    }
 
-    return { key: "elective", title: "Elective", arabic: "اختياري", order: 1 };
+    return { key: "required", title: "Program Requirement", arabic: "اجباري", order: 0 };
   };
 
   const availableCourses = useMemo(() => {
@@ -146,10 +149,8 @@ export default function CourseBrowser({
   return (
     <div className="flex flex-col h-full w-full bg-white border-r border-zinc-200 overflow-hidden">
       
-      {/* Top Header & Search */}
       <div className="p-4 sm:p-5 border-b border-zinc-100 space-y-4 shrink-0 bg-white">
         
-        {/* Semester Load Progress Bar & GPA unlock */}
         <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-3.5 space-y-3">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
@@ -219,7 +220,6 @@ export default function CourseBrowser({
         </div>
       </div>
 
-      {/* Accordion Course List with proper padding */}
       <div className="flex-1 overflow-y-auto p-4 sm:p-5 bg-zinc-50/30 pb-28">
         {levels.map(level => {
           const coursesInLevel = coursesByYear.get(level) ?? [];
