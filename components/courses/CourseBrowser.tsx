@@ -10,7 +10,7 @@ export default function CourseBrowser({
   semesterCourses, track, setTrack, timetable, setTimetable 
 }: { 
   semesterCourses: any[], track: string, setTrack: (t: string) => void,
-  timetable: TimetableEntry[], setTimetable: (t: any) => void
+  timetable: TimetableEntry[], setTimetable: any 
 }) {
   const [search, setSearch] = useState('');
   const [selectedCourse, setSelectedCourse] = useState<any | null>(null);
@@ -18,7 +18,6 @@ export default function CourseBrowser({
   // Accordion state for Years 1 through 4 (all open by default)
   const [expandedYears, setExpandedYears] = useState<Record<number, boolean>>({ 1: true, 2: true, 3: true, 4: true });
   
-  // Updated: Removed HA and SPECIAL
   const tracks = ['GN', 'CY', 'AI', 'BA'];
   const levels = [1, 2, 3, 4];
 
@@ -33,10 +32,10 @@ export default function CourseBrowser({
   );
 
   return (
-    <div className="flex flex-col h-full bg-white border-r border-zinc-200">
+    <div className="flex flex-col h-full w-full bg-white border-r border-zinc-200 overflow-hidden">
       
       {/* Top Specialization & Search Header */}
-      <div className="p-5 border-b border-zinc-100 space-y-4">
+      <div className="p-4 sm:p-5 border-b border-zinc-100 space-y-4 shrink-0 bg-white">
         <div>
           <label className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-2 block">Specialization Track</label>
           <div className="grid grid-cols-4 gap-2">
@@ -44,7 +43,7 @@ export default function CourseBrowser({
               <button
                 key={t}
                 onClick={() => setTrack(t)}
-                className={`py-1.5 text-xs font-bold rounded-lg border transition-all ${
+                className={`py-2 text-xs font-bold rounded-xl border transition-all ${
                   track === t 
                     ? 'bg-violet-600 text-white border-violet-600 shadow-md' 
                     : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-50'
@@ -68,10 +67,9 @@ export default function CourseBrowser({
         </div>
       </div>
 
-      {/* Accordion Course List */}
-      <div className="flex-1 overflow-y-auto p-5 bg-zinc-50/30">
+      {/* Accordion Course List with proper mobile scroll padding */}
+      <div className="flex-1 overflow-y-auto p-4 sm:p-5 bg-zinc-50/30 pb-28">
         {levels.map(level => {
-          // Find courses that have an offering matching BOTH the selected Track and this Year
           const coursesInLevel = searchedCourses.filter(sc => 
             sc.offerings.some((off: any) => off.track === track && off.eligible_years.includes(level))
           );
@@ -100,10 +98,10 @@ export default function CourseBrowser({
                     <Card 
                       key={sc.id} 
                       onClick={() => setSelectedCourse(sc)}
-                      className="p-3.5 hover:border-violet-300 hover:shadow-md cursor-pointer transition-all group border-zinc-200"
+                      className="p-3.5 hover:border-violet-300 hover:shadow-md cursor-pointer transition-all group border-zinc-200 active:scale-[0.99]"
                     >
-                      <div className="flex justify-between items-start">
-                        <div>
+                      <div className="flex justify-between items-start gap-2">
+                        <div className="min-w-0">
                           <div className="text-[11px] font-black text-violet-600 mb-1 tracking-widest uppercase">
                             {sc.source_code || "MATH0 / ELEC"}
                           </div>
@@ -111,7 +109,7 @@ export default function CourseBrowser({
                             {sc.courses.name}
                           </h3>
                         </div>
-                        <button className="h-7 w-7 flex-shrink-0 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-hover:bg-violet-600 group-hover:text-white transition-colors ml-2">
+                        <button className="h-7 w-7 flex-shrink-0 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-hover:bg-violet-600 group-hover:text-white transition-colors">
                           <Plus className="h-4 w-4" />
                         </button>
                       </div>
