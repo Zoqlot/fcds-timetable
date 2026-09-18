@@ -10,7 +10,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   CalendarDays,
   MapPin,
@@ -373,7 +372,8 @@ export default function SectionSelector({
       course_name: currentCourseName,
       offering_id: selectedGroupNumber !== null ? `logical-group-${selectedGroupNumber}` : "logical-group",
       meetings: selectedMeetings,
-    };
+      group_number: selectedGroup.groupNumber,
+    } as any;
 
     setTimetable((prev: any[]) => [
       ...prev.filter((entry) => entry.course_id !== course.id),
@@ -399,7 +399,7 @@ export default function SectionSelector({
       <DialogContent className="sm:max-w-[760px] max-h-[90vh] flex flex-col p-0 overflow-hidden bg-white rounded-[28px] shadow-2xl border-0">
         
         {/* HEADER */}
-        <DialogHeader className="px-7 py-6 border-b border-zinc-100 bg-gradient-to-br from-violet-50 via-white to-indigo-50">
+        <DialogHeader className="px-7 py-6 border-b border-zinc-100 bg-gradient-to-br from-violet-50 via-white to-indigo-50 shrink-0">
           <div className="flex items-start gap-4">
             <div className="h-12 w-12 shrink-0 rounded-2xl bg-violet-600 text-white flex items-center justify-center shadow-lg shadow-violet-200">
               <BookOpen className="h-6 w-6" />
@@ -424,8 +424,8 @@ export default function SectionSelector({
           </div>
         </DialogHeader>
 
-        {/* BODY */}
-        <ScrollArea className="flex-1 px-6 py-6 bg-zinc-50/40">
+        {/* NATIVE SCROLLABLE BODY (Fixes the cutoff issue) */}
+        <div className="flex-1 overflow-y-auto px-6 py-6 bg-zinc-50/40 min-h-0">
           {loading ? (
             <div className="py-16 flex flex-col items-center justify-center text-center">
               <div className="h-12 w-12 rounded-2xl bg-violet-100 flex items-center justify-center mb-4">
@@ -622,7 +622,7 @@ export default function SectionSelector({
               </section>
 
               {/* SECTION / PRACTICAL SELECTION */}
-              {selectedGroup && selectedGroup.sectionOptions.length > 0 && (
+              {selectedGroup?.sectionOptions.length > 0 && (
                 <section className="space-y-3">
                   <div className="flex items-center justify-between gap-3">
                     <div>
@@ -683,10 +683,10 @@ export default function SectionSelector({
               )}
             </div>
           )}
-        </ScrollArea>
+        </div>
 
         {/* FOOTER */}
-        <div className="p-5 border-t border-zinc-100 bg-white flex items-center justify-between gap-3">
+        <div className="p-5 border-t border-zinc-100 bg-white flex items-center justify-between gap-3 shrink-0 rounded-b-[28px]">
           <div className="hidden sm:block text-xs font-semibold text-zinc-400">
             {selectedGroupNumber === null
               ? "Select a group to continue"
