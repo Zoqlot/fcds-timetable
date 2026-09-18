@@ -1,0 +1,5868 @@
+{
+  "metadata": {
+    "format_version": 1,
+    "source_type": "manually_transcribed_from_group-column_general_timetables",
+    "track": "GN",
+    "levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "notes": [
+      "General track only. TTC is intentionally unlinked because its catalog code is not known.",
+      "Course codes were restored from the existing academic catalog used in the previous timetable import."
+    ],
+    "generated_for_semester": "Fall 2026/27",
+    "manual_transcription": true,
+    "cell_count": 198,
+    "course_count": 25
+  },
+  "cells": [
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "بسطا كريستين / د",
+        "raw_text": "Programming I (Lec) | بسطا كريستين / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Saturday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": "سيد اسراء . م",
+        "raw_text": "Linear Algebra (sec) | FCDS -408 | سيد اسراء . م",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Saturday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": "مشالي مريم . م",
+        "raw_text": "Probability I (sec) | مشالي مريم . م | FCDS -406",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Saturday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": "الحلواني ابتسام . م",
+        "raw_text": "Linear Algebra (sec) | الحلواني ابتسام . م | FCDS -105",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Saturday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": "مشالي مريم . م",
+        "raw_text": "Probability I (sec) | مشالي مريم . م | FCDS -108",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Saturday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "وليد محمد / د",
+        "raw_text": "Linear Algebra (Lec) | وليد محمد / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": "الحلواني ابتسام . م",
+        "raw_text": "Linear Algebra (sec) | الحلواني ابتسام . م | FCDS -108",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": "مشالي مريم . م",
+        "raw_text": "Probability I (sec) | مشالي مريم . م | FCDS -105",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "بسطا كريستين / د",
+        "raw_text": "Introduction to Data Sciences (Lec) | بسطا كريستين / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "ماجد فادي . م",
+        "raw_text": "Prog I | ماجد فادي . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Prog I | رفعت جيالن . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "السكري حسام . م",
+        "raw_text": "Introduction to CS | (Sec) | السكري حسام . م | FCDS -307",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "وليد محمد / د",
+        "raw_text": "Linear Algebra (Lec) | وليد محمد / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "القاضي أسماء / د",
+        "raw_text": "Probability and Statistics I (Lec) | القاضي أسماء / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Introduction | to DS | رفعت جيالن . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "ناجي مريم . م",
+        "raw_text": "Introduction | to DS | ناجي مريم . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Introduction to CS | (Sec) | مدحت مروان . م | FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "القاضي أسماء / د",
+        "raw_text": "Probability and Statistics I (Lec) | القاضي أسماء / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "وليد محمد / د",
+        "raw_text": "Linear Algebra (Lec) | وليد محمد / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Prog I | رفعت جيالن . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "محمود مروة . م",
+        "raw_text": "Prog I | محمود مروة . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "ناجي مريم . م",
+        "raw_text": "Introduction | to DS | ناجي مريم . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "مالك فادي . م",
+        "raw_text": "Introduction | to DS | مالك فادي . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "جمال محمود / د",
+        "raw_text": "Programming I (Lec) | جمال محمود / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "مصباح صالح / د",
+        "raw_text": "Introduction to Computer Systems (Lec) | مصباح صالح / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "فتحى ليلى / د",
+        "raw_text": "Probability and Statistics I (Lec) | فتحى ليلى / د | FCDS-307",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "شتا عمرو . م",
+        "raw_text": "Introduction | to DS | شتا عمرو . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "ياسر إيمان . م",
+        "raw_text": "Introduction | to DS | ياسر إيمان . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "ماجد فادي . م",
+        "raw_text": "Prog I | ماجد فادي . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Prog I | رفعت جيالن . م | (Lab406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "مدبولى ماجدة / د",
+        "raw_text": "Introduction to Data Sciences (Lec) | مدبولى ماجدة / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "مدبولى ماجدة / د",
+        "raw_text": "Introduction to Data Sciences (Lec) | مدبولى ماجدة / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Monday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". حسام حازم م",
+        "raw_text": "Linear Algebra (Sec) | . حسام حازم م | FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Monday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". نص امنيه م",
+        "raw_text": "Probability I| (Sec) | . نص امنيه م | FCDS -306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Prog I | رفعت جيالن . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "محمود مروه . م",
+        "raw_text": "Prog I | محمود مروه . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "غزل سالي . م",
+        "raw_text": "Introduction | to DS | غزل سالي . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "ماجد فادي . م",
+        "raw_text": "Introduction | to DS | ماجد فادي . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Monday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Introduction to CS | (Sec) | مدحت مروان . م | FCDS-306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Monday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "محمود مروة . م",
+        "raw_text": "Introduction to CS | (Sec) | محمود مروة . م | FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Monday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "الصباح جيهان / د",
+        "raw_text": "Probability and Statistics I (Lec) | الصباح جيهان / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "بسطا كريستين / د",
+        "raw_text": "Introduction to Data Sciences (Lec) | بسطا كريستين / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "شتا عمرو . م",
+        "raw_text": "Introduction | to DS | شتا عمرو . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "ممدوح راشد . م",
+        "raw_text": "Introduction | to DS | ممدوح راشد . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "حازم هاجر . م",
+        "raw_text": "Prog I | حازم هاجر . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Prog I | مدحت مروان . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "الحبروك محمد / د",
+        "raw_text": "Introduction to Computer Systems (Lec) | الحبروك محمد / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "حازم هاجر . م",
+        "raw_text": "Prog I | حازم هاجر . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "سعيد سارة . م",
+        "raw_text": "Prog I | سعيد سارة . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "ممدوح راشد . م",
+        "raw_text": "Introduction | to DS | ممدوح راشد . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "رفعت جيالن . م",
+        "raw_text": "Introduction | to DS | رفعت جيالن . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Introduction to CS | مدحت مروان . م | (Sec) | FCDS -306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "مالك فادي . م",
+        "raw_text": "Introduction to CS | (Sec) | مالك فادي . م | FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": "م . محمد سلمى",
+        "raw_text": "Linear Algebra (sec) | م . محمد سلمى | FCDS -105",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": "ناجي مريم . م",
+        "raw_text": "Probability I (sec) | ناجي مريم . م | FCDS -108",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Prog I | مدحت مروان . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "سعيد سارة . م",
+        "raw_text": "Prog I | سعيد سارة . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "ممدوح راشد . م",
+        "raw_text": "Introduction | to DS | ممدوح راشد . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "مالك فادي . م",
+        "raw_text": "Introduction | to DS | مالك فادي . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "عامر عبير / د",
+        "raw_text": "Programming I (Lec) | عامر عبير / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "م. دينا محمد",
+        "raw_text": "Linear Algebra (sec) | محمد دينا . م FCDS -306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "م. امنيه نصر",
+        "raw_text": "Probability I (sec) | نصر امنيه . م FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "الخولي محمود . م",
+        "raw_text": "Introduction to CS (Sec) | الخولي محمود . م | FCDS -306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "م. سلمى محمد",
+        "raw_text": "Linear Algebra (Sec) | محمد سلمى . م FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "العاطى عبد ماجد / د",
+        "raw_text": "Introduction to Computer Systems (Lec) | العاطى عبد ماجد / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "الخولي محمود . م",
+        "raw_text": "Introduction to CS | (Sec) | الخولي محمود . م | FCDS-308",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "محمود دينا . م",
+        "raw_text": "Probability I (Sec) | محمود دينا . م | FCDS -306",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00103",
+      "course_name": "Introduction to Computer Systems",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "العاطى عبد ماجد / د",
+        "raw_text": "Introduction to Computer Systems (Lec) | العاطى عبد ماجد / د | FCDS-507",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "وليد محمد / د",
+        "raw_text": "Linear Algebra (Lec) | وليد محمد / د | Hall 420",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "practical",
+      "option_label": "Sec 1",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "306",
+        "instructor": "ممدوح راشد . م",
+        "raw_text": "Introduction | to DS | ممدوح راشد . م | (Lab 306)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "practical",
+      "option_label": "Sec 2",
+      "course_code": "00104",
+      "course_name": "Introduction to Data Sciences",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "307",
+        "instructor": "مالك فادي . م",
+        "raw_text": "Introduction | to DS | مالك فادي . م | (Lab 307)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 3",
+      "section": 3,
+      "section_numbers": [
+        3
+      ],
+      "section_label": "Sec 3",
+      "component_type": "practical",
+      "option_label": "Sec 3",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "308",
+        "instructor": "حازم هاجر . م",
+        "raw_text": "Prog I | حازم هاجر . م | (Lab 308)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 4",
+      "section": 4,
+      "section_numbers": [
+        4
+      ],
+      "section_label": "Sec 4",
+      "component_type": "practical",
+      "option_label": "Sec 4",
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "lab",
+        "location": "406",
+        "instructor": "مدحت مروان . م",
+        "raw_text": "Prog I | مدحت مروان . م | (Lab 406)",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 3-4",
+      "section": null,
+      "section_numbers": [
+        3,
+        4
+      ],
+      "section_label": "Sec 3-4",
+      "component_type": "section",
+      "option_label": "Sec 3-4",
+      "course_code": "00101",
+      "course_name": "Linear Algebra",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": "م. دينا محمود",
+        "raw_text": "Linear Algebra (Sec) | محمود دينا . م FCDS-108",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00106",
+      "course_name": "Probability and Statistics I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": "م. امنيه نصر",
+        "raw_text": "Probability I (Sec) | نصر امنيه . م FCDS -105",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00105",
+      "course_name": "Programming I",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "عامر عبير / د",
+        "raw_text": "Programming I (Lec) | عامر عبير / د | Hall 425",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3 - Sec 1-4",
+      "section": null,
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_label": "Sec 1-4",
+      "component_type": "section",
+      "option_label": "Sec 1-4",
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": "ياسر إيمان . م",
+        "raw_text": "Math 0 (Sec) | ياسر إيمان . م | FCDS-401",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 5
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_label": "Sec 1-4",
+      "component_type": "section",
+      "option_label": "Sec 1-4",
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-404",
+        "instructor": "محمد سلمى . م",
+        "raw_text": "Math 0 (Sec) | محمد سلمى . م | FCDS-404",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 5
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1,
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1,2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "سعيد أسماء / د",
+        "raw_text": "Math 0 (Lec) | سعيد أسماء / د | FCDS-407",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 1 - Sec 1-4",
+      "section": null,
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_label": "Sec 1-4",
+      "component_type": "section",
+      "option_label": "Sec 1-4",
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": "ياسر إيمان . م",
+        "raw_text": "Math 0 (Sec) | ياسر إيمان . م | FCDS-401",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 5
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 2 - Sec 1-4",
+      "section": null,
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "section_label": "Sec 1-4",
+      "component_type": "section",
+      "option_label": "Sec 1-4",
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-404",
+        "instructor": "ممدوح راشد . م",
+        "raw_text": "Math 0 (Sec) | ممدوح راشد . م | FCDS-404",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 5
+      }
+    },
+    {
+      "level": 1,
+      "track": "GN",
+      "groups": [
+        3,
+        4
+      ],
+      "group_total": 4,
+      "raw_section_label": "Level 1 GN - Groups 3,4 - Sec 1-4",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": null,
+      "course_name": "Math 0",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "سعيد أسماء / د",
+        "raw_text": "Math 0 (Lec) | سعيد أسماء / د | FCDS-307",
+        "source_file": "جدول البرنامج العام - المستوى الاول.pdf",
+        "source_page": 5
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". حازم هاجر م",
+        "raw_text": "DS Methodology (Sec) | . حازم هاجر م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". مهدي عال م",
+        "raw_text": "Intro to DB (Sec) | . مهدي عال م | FCDS-401",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Sunday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". شتا عمرو م",
+        "raw_text": "Intro to DB (Sec) | . شتا عمرو م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Sunday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". حازم هاجر م",
+        "raw_text": "DS Methodology (Sec) | . حازم هاجر م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ وليد محمد د",
+        "raw_text": "Advanced Calculus (Lec) | / وليد محمد د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". حسام حازم م",
+        "raw_text": "Adv. Calc (Sec) | . حسام حازم م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Monday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". مالك فادي م",
+        "raw_text": "Intro to DB (Sec) | . مالك فادي م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Monday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "DS Methodology (Sec) | . أحمد أمان م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". شتا عمرو م",
+        "raw_text": "Numerical Comp. (Sec) | . شتا عمرو م | FCDS-308",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Monday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "عشر / ى جيهان د",
+        "raw_text": "Numerical Computation (Lec) | عشر / | ى جيهان د | Hall 420",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": "م العرن ندى .",
+        "raw_text": "Adv. Calc (Sec) | م العرن ندى . | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". مشالي مريم م",
+        "raw_text": "Numerical Comp. (Sec) | . مشالي مريم م | FCDS-308",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". قطب شموع م",
+        "raw_text": "Probability 2 (Sec) | . قطب شموع م | FCDS-306",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". حسن رجب م",
+        "raw_text": "Probability 2 (Sec) | . حسن رجب م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". حسن رجب م",
+        "raw_text": "Probability 2 (Sec) | . حسن رجب م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". قطب شموع م",
+        "raw_text": "Probability 2 (Sec) | . قطب شموع م | FCDS-308",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". حسام حازم م",
+        "raw_text": "Adv. Calc (Sec) | . حسام حازم م | FCDS-306",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". مشالي مريم م",
+        "raw_text": "Numerical Comp. (Sec) | . مشالي مريم م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ مصطف ميار د",
+        "raw_text": "Data Science Methodology (Lec) | / مصطف ميار د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "/ فوزى محمد د",
+        "raw_text": "Probability 2 (Lec) | / فوزى محمد د | FCDS-407",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". شتا عمرو م",
+        "raw_text": "Numerical Comp. (Sec) | . شتا عمرو م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "م العرن ندى .",
+        "raw_text": "Adv. Calc (Sec) | م العرن ندى . | FCDS-308",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". مشالي مريم م",
+        "raw_text": "Numerical Comp. (Sec) | . مشالي مريم م | FCDS-306",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". محمود دينا م",
+        "raw_text": "Adv. Calc (Sec) | . محمود دينا م | FCDS-407",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "/ وليد محمد د",
+        "raw_text": "Advanced Calculus (Lec) | / وليد محمد د | Hall 420",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". شتا عمرو م",
+        "raw_text": "Intro to DB (Sec) | . شتا عمرو م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". معت م",
+        "raw_text": "Probability 2 (Sec) | . معت م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "/ وليد محمد د",
+        "raw_text": "Advanced Calculus (Lec) | / وليد محمد د | FCDS-307",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "/ مصطف ميار د",
+        "raw_text": "Data Science Methodology (Lec) | / مصطف ميار د | FCDS-407",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". معت م",
+        "raw_text": "Probability 2 (Sec) | . معت م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". حازم هاجر م",
+        "raw_text": "DS Methodology (Sec) | . حازم هاجر م | FCDS-401",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "/ جمال محمود د",
+        "raw_text": "Introduction to Databases (Lec) | / جمال محمود د | Hall 420",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ مصطف ميار د",
+        "raw_text": "Data Science Methodology (Lec) | / مصطف ميار د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": null,
+      "course_name": "Technology Transfer and Commercialization (TTC)",
+      "meeting": {
+        "day": "Thursday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "404",
+        "instructor": "/ نخلة سامح د",
+        "raw_text": "Technology Transfer and Commercialization (TTC) (Lec) | / نخلة سامح د | Hall 404",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Thursday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "/ كندس إسحاق د",
+        "raw_text": "Probability 2 (Lec) | / كندس إسحاق د | Hall 420",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Thursday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "/ السبك بثينة د",
+        "raw_text": "Numerical Computation (Lec) | / السبك بثينة د | Hall 425",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00201",
+      "course_name": "Probability and Statistics II",
+      "meeting": {
+        "day": "Thursday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ عصام تامر د",
+        "raw_text": "Probability 2 (Lec) | / عصام تامر د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "/ السبك بثينة د",
+        "raw_text": "Numerical Computation (Lec) | / السبك بثينة د | Hall 420",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". سعيد سارة م",
+        "raw_text": "Intro to DB (Sec) | . سعيد سارة م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "DS Methodology (Sec) | . أحمد أمان م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ مدحت محمد د",
+        "raw_text": "Introduction to Databases (Lec) | / مدحت محمد د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": "/ مدحت محمد د",
+        "raw_text": "Introduction to Databases (Lec) | / مدحت محمد د | FCDS-507",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01202",
+      "course_name": "Data Science Methodology",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "DS Methodology (Sec) | . أحمد أمان م | FCDS-408",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00202",
+      "course_name": "Introduction to Databases",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". سعيد سارة م",
+        "raw_text": "Intro to DB (Sec) | . سعيد سارة م | FCDS-406",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00203",
+      "course_name": "Numerical Computations",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": "العرن ندي م",
+        "raw_text": ". العرن ندي م Numerical Comp. (Sec) | FCDS-308",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 2,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 2 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01201",
+      "course_name": "Advanced Calculus",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": "يشي ماري م",
+        "raw_text": ". يشي ماري م Adv. Calc (Sec) | FCDS-306",
+        "source_file": "Level 2 - General.pdf",
+        "source_page": 4
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". امي عمرو د",
+        "raw_text": "Stochastic Processes (Lec) | . امي عمرو د | FCDS-407",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". محمود مروة م",
+        "raw_text": "Data Visualization (sec) | . محمود مروة م | FCDS-308",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". غزل سالي م",
+        "raw_text": "Stochastic Processes (Sec) | . غزل سالي م | FCDS-306",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": ". الحلوان م ابتسام",
+        "raw_text": "Stochastic Processes (Sec) | . الحلوان م ابتسام | FCDS-105",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "Data Visualization (Sec) | . أحمد أمان م | FCDS-108",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Saturday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": ". فؤاد يارس د",
+        "raw_text": "Data Visualization (Lec) | . فؤاد يارس د | Hall 420",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Saturday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": ". حاتم د",
+        "raw_text": "Distributed Processing (Lec) | . حاتم د | Hall 425",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Saturday",
+        "period": "6:30 – 8:30",
+        "start_time": "18:30",
+        "end_time": "20:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": ". حاتم د",
+        "raw_text": "Distributed Processing (Lec) | . حاتم د | Hall 425",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00306",
+      "course_name": "Web Programming",
+      "meeting": {
+        "day": "Saturday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". سعيد سارة م",
+        "raw_text": "Web Programming (Sec) | . سعيد سارة م | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00306",
+      "course_name": "Web Programming",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": ". خميس محمد د",
+        "raw_text": "Web Programming (Lec) | . خميس محمد د | FCDS-307",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". عباسي محمد د",
+        "raw_text": "Design and Analysis of Experiments (Lec) | . عباسي محمد د | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-105",
+        "instructor": ". غزل سالي م",
+        "raw_text": "Stochastic Processes (Sec) | . غزل سالي م | FCDS-105",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-108",
+        "instructor": ". محمود مروة م",
+        "raw_text": "Data Visualization (Sec) | . محمود مروة م | FCDS-108",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Sunday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". نص امنيه م",
+        "raw_text": "Experimental Design (Sec) | . نص امنيه م | FCDS-407",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Sunday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". نص امنيه م",
+        "raw_text": "Experimental Design (Sec) | . نص امنيه م | FCDS-407",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Sunday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": ". فؤاد يارس د",
+        "raw_text": "Data Visualization (Lec) | . فؤاد يارس د | Hall 425",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "00303",
+      "course_name": "Algorithm Design",
+      "meeting": {
+        "day": "Sunday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". مالك فادي م",
+        "raw_text": "Algorithm Design (Sec) | . مالك فادي م | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00303",
+      "course_name": "Algorithm Design",
+      "meeting": {
+        "day": "Sunday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". إسماعيل أسامة د",
+        "raw_text": "Algorithm Design (Lec) | . إسماعيل أسامة د | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". روؤف عماد د",
+        "raw_text": "Computer Networks (Lec) | . روؤف عماد د | FCDS-407",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-308",
+        "instructor": ". عباس محمد د",
+        "raw_text": "Design and Analysis of Experiments (Lec) | . عباس محمد د | FCDS-308",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Sunday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". روؤف عماد د",
+        "raw_text": "Computer Networks (Lec) | . روؤف عماد د | FCDS-407",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Monday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". الحلوان م ابتسام",
+        "raw_text": "Stochastic Processes (Sec) | . الحلوان م ابتسام | FCDS-406",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Monday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-408",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "Data Visualization (Sec) | . أحمد أمان م | FCDS-408",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". أحمد أمان م",
+        "raw_text": "Data Visualization (Sec) | . أحمد أمان م | FCDS-406",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Monday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". الحلوان م ابتسام",
+        "raw_text": "Stochastic Processes (Sec) | . الحلوان م ابتسام | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1-2",
+      "section": null,
+      "section_numbers": [
+        1,
+        2
+      ],
+      "section_label": "Sec 1-2",
+      "component_type": "section",
+      "option_label": "Sec 1-2",
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Monday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". نص امنيه م",
+        "raw_text": "Experimental Design (Sec) | . نص امنيه م | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". ناج مريم م",
+        "raw_text": "Distributed Processing (Sec) | . ناج مريم م | FCDS-401",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-404",
+        "instructor": ". السكري حسام م",
+        "raw_text": "Computer Networks (Sec) | . السكري حسام م | FCDS-404",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". يارس إيمان م",
+        "raw_text": "Computer Networks (Sec) | . يارس إيمان م | FCDS-406",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": ". ناج مريم م",
+        "raw_text": "Distributed Processing (Sec) | . ناج مريم م | FCDS-307",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". ناج مريم م",
+        "raw_text": "Distributed Processing (Sec) | . ناج مريم م | FCDS-406",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": ". يارس إيمان م",
+        "raw_text": "Computer Networks (Sec) | . يارس إيمان م | FCDS-307",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". السكري حسام م",
+        "raw_text": "Computer Networks (Sec) | . السكري حسام م | FCDS-401",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "00304",
+      "course_name": "Distributed Processing",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-404",
+        "instructor": ". حسن رجب م",
+        "raw_text": "Distributed Processing (Sec) | . حسن رجب م | FCDS-404",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-404",
+        "instructor": ". امي عمرو د",
+        "raw_text": "Stochastic Processes (Lec) | . امي عمرو د | FCDS-404",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01302",
+      "course_name": "Design and Analysis of Experiments",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". عباس محمد د",
+        "raw_text": "Design and Analysis of Experiments (Lec) | . عباس محمد د | FCDS-401",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": ". فؤاد يارس د",
+        "raw_text": "Data Visualization (Lec) | . فؤاد يارس د | Hall 425",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". امي عمرو د",
+        "raw_text": "Stochastic Processes (Lec) | . امي عمرو د | FCDS-507",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "00308",
+      "course_name": "Computer Networks",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-401",
+        "instructor": ". روؤف عماد د",
+        "raw_text": "Computer Networks (Lec) | . روؤف عماد د | FCDS-401",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 1",
+      "section": 1,
+      "section_numbers": [
+        1
+      ],
+      "section_label": "Sec 1",
+      "component_type": "section",
+      "option_label": "Sec 1",
+      "course_code": "01303",
+      "course_name": "Data Visualization Tools",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-306",
+        "instructor": ". محمود مروة م",
+        "raw_text": "Data Visualization (Sec) | . محمود مروة م | FCDS-306",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 3 - Sec 2",
+      "section": 2,
+      "section_numbers": [
+        2
+      ],
+      "section_label": "Sec 2",
+      "component_type": "section",
+      "option_label": "Sec 2",
+      "course_code": "01301",
+      "course_name": "Stochastic Processes",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-406",
+        "instructor": ". غزل سالي م",
+        "raw_text": "Stochastic Processes (Sec) | . غزل سالي م | FCDS-406",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 3,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 3 GN - Groups 1,2,3 - Sec 1-2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": null,
+      "course_name": "Technology Transfer and Commercialization (TTC)",
+      "meeting": {
+        "day": "Thursday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-413",
+        "instructor": "/ نخلة سامح د",
+        "raw_text": "Technology Transfer and Commercialization (TTC) (Lec) | / نخلة سامح د | FCDS-413",
+        "source_file": "Level 3 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "Dr. Reem Essam",
+        "raw_text": "Introduction to Social Networks (Lec) | Dr. Reem Essam | Hall 425",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01413",
+      "course_name": "Data Compression Techniques",
+      "meeting": {
+        "day": "Saturday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". حسن رجب م",
+        "raw_text": "Data Compression Techniques (Sec) | . حسن رجب م | FCDS-507",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01410",
+      "course_name": "Non-Linear and Combinatorial Optimization",
+      "meeting": {
+        "day": "Saturday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": ". غزل سالي م",
+        "raw_text": "Non-linear and Combinatorial optimization (Sec) | . غزل سالي م | Hall 420",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "سعدالدين وليد م",
+        "raw_text": ". Big Data Analytics (Sec) سعدالدين وليد م | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01410",
+      "course_name": "Non-Linear and Combinatorial Optimization",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "Dr. Amr Amin",
+        "raw_text": "Non-linear and Combinatorial optimization (Lec) | Dr. Amr Amin | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Saturday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "Dr. Reem Essam",
+        "raw_text": "Introduction to Social Networks (Lec) | Dr. Reem Essam | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": ". الحلوان ابتسام م",
+        "raw_text": "Simulations (Sec) | . الحلوان ابتسام م | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "Dr. Reem Essam",
+        "raw_text": "Introduction to Social Networks (Lec) | Dr. Reem Essam | Hall 420",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01415",
+      "course_name": "Distributed Database Systems",
+      "meeting": {
+        "day": "Tuesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "شر . يف زينه م",
+        "raw_text": "Distributed Database Systems (Sec) | شر . | يف زينه م | Hall 420",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 1
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "Dr. Mohamed Abbassy",
+        "raw_text": "Big Data Analytics (Lec) | Dr. Mohamed Abbassy | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". الدين سعد وليد م",
+        "raw_text": "Big Data Analytics (Sec) | . الدين سعد وليد م | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". ماجد فادي م",
+        "raw_text": "Introduction to Social Networks (Sec) | . ماجد فادي م | FCDS-507",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "م . ماجد فادي",
+        "raw_text": "Introduction to Social Networks (Sec) | م . ماجد فادي | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": "Dr. Mohamed Abbassy",
+        "raw_text": "Big Data Analytics (Lec) | Dr. Mohamed Abbassy | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": ". السكري حسام م",
+        "raw_text": "Simulations (Sec) | . السكري حسام م | Hall 420",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01410",
+      "course_name": "Non-Linear and Combinatorial Optimization",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-507",
+        "instructor": ". غزل سالي م",
+        "raw_text": "Non-linear and Combinatorial optimization (Sec) | . غزل سالي م | FCDS-507",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "8:30 – 10:30",
+        "start_time": "08:30",
+        "end_time": "10:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". محمد زياد م",
+        "raw_text": "Big Data Analytics (Sec) | . محمد زياد م | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": "Dr. Emad Raouf",
+        "raw_text": "Simulations (Lec) | Dr. Emad Raouf | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01401",
+      "course_name": "Big Data Analytics",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "10:30 – 12:30",
+        "start_time": "10:30",
+        "end_time": "12:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "Dr. Mohamed Abbassy",
+        "raw_text": "Big Data Analytics (Lec) | Dr. Mohamed Abbassy | Hall 425",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-307",
+        "instructor": ". السكري حسام م",
+        "raw_text": "Simulations (Sec) | . السكري حسام م | FCDS-307",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01402",
+      "course_name": "Introduction to Social Networks",
+      "meeting": {
+        "day": "Wednesday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "room",
+        "location": "FCDS-407",
+        "instructor": ". ماجد فادي م",
+        "raw_text": "Introduction to Social Networks (Sec) | . ماجد فادي م | FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01413",
+      "course_name": "Data Compression Techniques",
+      "meeting": {
+        "day": "Thursday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "FCDS-407",
+        "instructor": ". حسن رجب م",
+        "raw_text": "Data Compression Techniques (Sec) | . حسن رجب م | Hall FCDS-407",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Thursday",
+        "period": "2:30 - 4:30",
+        "start_time": "14:30",
+        "end_time": "16:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "Dr. Emad Raouf",
+        "raw_text": "Simulations (Lec) | Dr. Emad Raouf | Hall 425",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01413",
+      "course_name": "Data Compression Techniques",
+      "meeting": {
+        "day": "Thursday",
+        "period": "4:30 – 6:30",
+        "start_time": "16:30",
+        "end_time": "18:30",
+        "location_type": "hall",
+        "location": "420",
+        "instructor": "Dr. Mahmoud Gamal",
+        "raw_text": "Data Compression Techniques (Lec) | Dr. Mahmoud Gamal | Hall 420",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1,2,3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01415",
+      "course_name": "Distributed Database Systems",
+      "meeting": {
+        "day": "Thursday",
+        "period": "6:30 – 8:30",
+        "start_time": "18:30",
+        "end_time": "20:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "Dr. Hatem",
+        "raw_text": "Distributed Database Systems (Lec) | Dr. Hatem | Hall 425",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 3
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        1
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 1",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01415",
+      "course_name": "Distributed Database Systems",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "FCDS-413",
+        "instructor": ". سعيد حمدي م",
+        "raw_text": "Distributed Database Systems (Sec) | . سعيد حمدي م | Hall FCDS-413",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        2
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 2",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "lecture",
+      "option_label": null,
+      "course_code": "01403",
+      "course_name": "Simulations",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "425",
+        "instructor": "Dr. Emad Raouf",
+        "raw_text": "Simulations (Lec) | Dr. Emad Raouf | Hall 425",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    },
+    {
+      "level": 4,
+      "track": "GN",
+      "groups": [
+        3
+      ],
+      "group_total": 3,
+      "raw_section_label": "Level 4 GN - Groups 3",
+      "section": null,
+      "section_numbers": [],
+      "section_label": null,
+      "component_type": "section",
+      "option_label": null,
+      "course_code": "01415",
+      "course_name": "Distributed Database Systems",
+      "meeting": {
+        "day": "Thursday",
+        "period": "12:30 – 2:30",
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "location_type": "hall",
+        "location": "FCDS-413",
+        "instructor": ". سعيد حمدي م",
+        "raw_text": "Distributed Database Systems (Sec) | . سعيد حمدي م | Hall FCDS-413",
+        "source_file": "Level 4 - General.pdf",
+        "source_page": 2
+      }
+    }
+  ]
+}
