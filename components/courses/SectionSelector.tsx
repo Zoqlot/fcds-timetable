@@ -389,7 +389,7 @@ export default function SectionSelector({
   const isStep2Ready =
     !!selectedGroup &&
     !!selectedLecture &&
-    (selectedGroup.sectionOptions.length === 0 || !!selectedSection) &&
+    ((selectedGroup?.sectionOptions?.length ?? 0) === 0 || !!selectedSection) &&
     !selectedConflict;
 
   const existingCourseSelected = timetable.some((entry) => entry.course_id === course?.id);
@@ -622,7 +622,7 @@ export default function SectionSelector({
               </section>
 
               {/* SECTION / PRACTICAL SELECTION */}
-              {selectedGroup?.sectionOptions.length > 0 && (
+              {(selectedGroup?.sectionOptions?.length ?? 0) > 0 && (
                 <section className="space-y-3">
                   <div className="flex items-center justify-between gap-3">
                     <div>
@@ -632,7 +632,7 @@ export default function SectionSelector({
                   </div>
 
                   <div className="grid gap-3">
-                    {selectedGroup.sectionOptions.map((option) => {
+                    {selectedGroup?.sectionOptions.map((option) => {
                       const conflictCourse = getConflict(option.meetings);
                       const disabled = !!conflictCourse;
                       const selected = option.id === selectedSectionId;
