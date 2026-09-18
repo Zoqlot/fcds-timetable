@@ -599,21 +599,24 @@ export default function CombinationsGenerator({
               />
             </div>
             
-            {!extendedLoadApproved ? (
-              <Button 
-                size="sm" 
-                variant="outline"
-                onClick={() => {
-                  setExtendedLoadApproved(true);
-                  if (message?.includes("extended load")) setMessage(null);
-                }}
-                className="w-full bg-amber-50 border-amber-200 text-amber-800 hover:bg-amber-100 font-bold text-xs h-8 rounded-lg shadow-sm transition-colors"
-              >
-                Unlock 21 Credits (GPA &gt; {EXTENDED_GPA_THRESHOLD})
-              </Button>
-            ) : (
-              <div className="flex items-center justify-center gap-1.5 text-emerald-700 font-bold text-xs bg-emerald-50 border border-emerald-200 rounded-lg h-8">
-                <Check className="h-4 w-4" /> 21 Credits Unlocked
+            {selectedCredits > NORMAL_MAX_CREDITS && (
+              <div className="rounded-xl bg-amber-50 border border-amber-200 p-3 space-y-2">
+                <div className="text-[11px] font-bold text-amber-900 leading-tight">
+                  Exceeds standard limit ({NORMAL_MAX_CREDITS} cr). Requires GPA &gt; {EXTENDED_GPA_THRESHOLD}.
+                </div>
+                {!extendedLoadApproved ? (
+                  <Button 
+                    size="sm" 
+                    onClick={() => setExtendedLoadApproved(true)}
+                    className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs h-8 rounded-lg shadow-sm"
+                  >
+                    Confirm GPA &gt; {EXTENDED_GPA_THRESHOLD}
+                  </Button>
+                ) : (
+                  <div className="flex items-center gap-1.5 text-emerald-700 font-bold text-xs pt-0.5">
+                    <Check className="h-4 w-4" /> Extended load authorized
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -803,7 +806,7 @@ export default function CombinationsGenerator({
             {message && <div className="max-w-xl mt-4 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-xs font-semibold text-red-800">{message}</div>}
           </div>
         ) : (
-          <div className="flex-1 min-h-0"><TimetableGrid timetable={displayedSchedules[currentIndex]} theme={theme} onRemove={() => {}} /></div>
+          <TimetableGrid timetable={displayedSchedules[currentIndex]} theme={theme} onRemove={() => {}} />
         )}
       </main>
     </>
