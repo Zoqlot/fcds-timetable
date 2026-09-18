@@ -314,7 +314,7 @@ export default function SectionSelector({
   function dedupeChoices(options: Choice[]) {
     const seen = new Set<string>();
     return options.filter((choice) => {
-      const signature = choice.meetings
+      const signature = (choice.meetings ?? [])
         .map((m) => `${m.day}|${m.period}|${m.start_time}|${m.end_time}|${m.location}|${m.instructor}`)
         .sort().join("||");
       if (seen.has(signature)) return false;
@@ -324,8 +324,8 @@ export default function SectionSelector({
   }
 
   const selectedGroup = groupPlans.find((group) => group.groupNumber === selectedGroupNumber);
-  const selectedLecture = selectedGroup?.lectureOptions.find((option) => option.id === selectedLectureId);
-  const selectedSection = selectedGroup?.sectionOptions.find((option) => option.id === selectedSectionId);
+  const selectedLecture = (selectedGroup?.lectureOptions ?? []).find((option) => option.id === selectedLectureId);
+  const selectedSection = (selectedGroup?.sectionOptions ?? []).find((option) => option.id === selectedSectionId);
 
   const selectedMeetings = useMemo(
     () => [...(selectedLecture?.meetings ?? []), ...(selectedSection?.meetings ?? [])],
@@ -346,10 +346,10 @@ export default function SectionSelector({
   const getConflict = (meetings: Meeting[]) => {
     if (!course || !course.id) return null;
 
-    for (const meeting of meetings) {
-      for (const entry of timetable) {
+    for (const meeting of (meetings ?? [])) {
+      for (const entry of (timetable ?? [])) {
         if (entry.course_id === course.id) continue;
-        for (const existingMeeting of entry.meetings ?? []) {
+        for (const existingMeeting of (entry.meetings ?? [])) {
           if (meeting.day === existingMeeting.day && Number(meeting.period) === Number(existingMeeting.period)) {
             return entry.course_name;
           }
@@ -389,7 +389,7 @@ export default function SectionSelector({
   const isStep2Ready =
     !!selectedGroup &&
     !!selectedLecture &&
-    (selectedGroup.sectionOptions.length === 0 || !!selectedSection) &&
+    ((selectedGroup?.sectionOptions?.length ?? 0) === 0 || !!selectedSection) &&
     !selectedConflict;
 
   const existingCourseSelected = timetable.some((entry) => entry.course_id === course?.id);
@@ -424,7 +424,7 @@ export default function SectionSelector({
           </div>
         </DialogHeader>
 
-        {/* NATIVE SCROLLABLE BODY (Fixes the cutoff issue) */}
+        {/* NATIVE SCROLLABLE BODY */}
         <div className="flex-1 overflow-y-auto px-6 py-6 bg-zinc-50/40 min-h-0">
           {loading ? (
             <div className="py-16 flex flex-col items-center justify-center text-center">
@@ -559,7 +559,7 @@ export default function SectionSelector({
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-[0.18em] text-violet-600">Step 2</div>
-                  <h3 className="text-xl font-black text-zinc-900 mt-1">Build Group {selectedGroup?.groupNumber}</h3>
+                  <h3 className="text-xl font-black text-zinc-900 mt-1">Build Group {selectedGroup?.groupNumber ?? ""}</h3>
                 </div>
                 <button
                   type="button"
@@ -584,7 +584,7 @@ export default function SectionSelector({
                 </div>
 
                 <div className="grid gap-3">
-                  {selectedGroup?.lectureOptions.map((option) => {
+                  {(selectedGroup?.lectureOptions ?? []).map((option) => {
                     const conflictCourse = getConflict(option.meetings);
                     const disabled = !!conflictCourse;
                     const selected = option.id === selectedLectureId;
@@ -622,7 +622,7 @@ export default function SectionSelector({
               </section>
 
               {/* SECTION / PRACTICAL SELECTION */}
-              {selectedGroup?.sectionOptions.length > 0 && (
+              {(selectedGroup?.sectionOptions?.length ?? 0) > 0 && (
                 <section className="space-y-3">
                   <div className="flex items-center justify-between gap-3">
                     <div>
@@ -632,7 +632,7 @@ export default function SectionSelector({
                   </div>
 
                   <div className="grid gap-3">
-                    {selectedGroup.sectionOptions.map((option) => {
+                    {(selectedGroup?.sectionOptions ?? []).map((option) => {
                       const conflictCourse = getConflict(option.meetings);
                       const disabled = !!conflictCourse;
                       const selected = option.id === selectedSectionId;
@@ -719,7 +719,7 @@ export default function SectionSelector({
 function MeetingList({ meetings }: { meetings: Meeting[] }) {
   return (
     <div className="mt-3 space-y-2">
-      {meetings.map((meeting, idx) => (
+      {(meetings ?? []).map((meeting, idx) => (
         <div key={idx} className="rounded-xl bg-zinc-50 border border-zinc-100 p-3">
           <div className="flex items-center gap-2 text-sm">
             <CalendarDays className="h-4 w-4 text-violet-500 shrink-0" />
