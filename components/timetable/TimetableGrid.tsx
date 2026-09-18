@@ -15,16 +15,16 @@ const PERIODS = [
 ];
 
 export default function TimetableGrid({ 
-  timetable, theme, onRemove 
+  timetable = [], theme, onRemove 
 }: { 
-  timetable: TimetableEntry[]; theme: TimetableTheme; onRemove: (id: string) => void;
+  timetable?: TimetableEntry[]; theme: TimetableTheme; onRemove: (id: string) => void;
 }) {
   const grid: Record<string, Record<number, { entry: TimetableEntry; meeting: any }>> = {};
   
   DAYS.forEach(day => {
     grid[day] = {};
-    timetable.forEach(entry => {
-      entry.meetings.forEach(meeting => {
+    (timetable || []).forEach(entry => {
+      (entry.meetings || []).forEach(meeting => {
         if (meeting.day === day) grid[day][meeting.period] = { entry, meeting };
       });
     });
