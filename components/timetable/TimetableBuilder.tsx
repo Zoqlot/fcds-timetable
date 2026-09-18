@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import CourseBrowser from '@/components/courses/CourseBrowser';
 import TimetableGrid from './TimetableGrid';
-import { CalendarDays, Palette, Download } from 'lucide-react';
+import { CalendarDays, Palette, Download, Trash2 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 
@@ -87,13 +87,23 @@ export default function TimetableBuilder({ semesterName, semesterCourses }: { se
 
           <div className="flex items-center gap-3">
             {timetable.length > 0 && (
-              <Button 
-                variant="outline" 
-                onClick={() => window.print()}
-                className="inline-flex items-center justify-center rounded-xl text-xs font-black border border-zinc-300 bg-white text-zinc-700 shadow-sm hover:bg-zinc-100 h-9 px-3 gap-1.5"
-              >
-                <Download className="h-3.5 w-3.5 text-violet-600" /> Export PDF
-              </Button>
+              <>
+                <Button 
+                  variant="outline" 
+                  onClick={() => setTimetable([])}
+                  className="inline-flex items-center justify-center rounded-xl text-xs font-black border border-red-200 bg-red-50 text-red-600 shadow-sm hover:bg-red-100 hover:text-red-700 h-9 px-3 gap-1.5 transition-colors"
+                >
+                  <Trash2 className="h-3.5 w-3.5" /> Clear All
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  onClick={() => window.print()}
+                  className="inline-flex items-center justify-center rounded-xl text-xs font-black border border-zinc-300 bg-white text-zinc-700 shadow-sm hover:bg-zinc-100 h-9 px-3 gap-1.5"
+                >
+                  <Download className="h-3.5 w-3.5 text-violet-600" /> Export PDF
+                </Button>
+              </>
             )}
 
             <Popover>

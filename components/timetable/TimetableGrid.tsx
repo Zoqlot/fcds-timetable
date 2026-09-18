@@ -32,10 +32,11 @@ export default function TimetableGrid({
 
   return (
     <div 
-      className="flex-1 min-h-0 overflow-auto rounded-3xl shadow-sm border border-zinc-200 bg-white/50 backdrop-blur-sm p-4 print:p-0 print:border-0 print:shadow-none print:bg-transparent"
+      className="flex-1 h-full min-h-0 w-full overflow-auto rounded-3xl shadow-sm border border-zinc-200 bg-white/50 backdrop-blur-sm p-4 print:p-0 print:border-0 print:shadow-none print:bg-transparent"
       style={{ WebkitPrintColorAdjust: "exact", printColorAdjust: "exact" }}
     >
-      <div className="min-w-[1100px] print:min-w-full w-full flex flex-col gap-3 print:gap-1.5">
+      {/* Added pb-8 below to prevent Thursday from getting cut off */}
+      <div className="min-w-[1100px] print:min-w-full w-full flex flex-col gap-3 print:gap-1.5 pb-8 print:pb-0">
         
         <div className="grid grid-cols-[100px_repeat(6,1fr)] gap-3 print:gap-1.5 mb-2 print:mb-1">
           <div className="flex items-end justify-center pb-2">
