@@ -243,6 +243,127 @@ function renderCanvas(
     });
   };
 
+
+  const drawTimetable = () => {
+    if (!ordered.length) return;
+    const toDate = (value: string) => {
+      const [year, month, day] = value.split("-").map(Number);
+      return new Date(Date.UTC(year, month - 1, day));
+    };
+    const first = toDate(ordered[0].date);
+    const last = toDate(ordered[ordered.length - 1].date);
+    const dates: string[] = [];
+    for (const d = new Date(first); d <= last; d.setUTCDate(d.getUTCDate() + 1)) dates.push(d.toISOString().slice(0, 10));
+    const slots = Array.from(new Map(ordered.map((e) => [e.startTime + "|" + e.endTime, { start: e.startTime, end: e.endTime }])).values())
+      .sort((a, b) => a.start.localeCompare(b.start));
+    const clock = (value: string) => {
+      const [hh, mm] = value.split(":").map(Number);
+      return (hh % 12 || 12) + (mm ? ":" + String(mm).padStart(2, "0") : "") + (hh >= 12 ? " PM" : " AM");
+    };
+    const headerH = Math.max(54, Math.min(78, availableH * 0.12));
+    const dayW = Math.max(112, Math.min(174, contentW * 0.17));
+    const gridX = margin + dayW + 8;
+    const gridW = contentW - dayW - 8;
+    const colGap = 7;
+    const slotW = (gridW - colGap * Math.max(0, slots.length - 1)) / Math.max(1, slots.length);
+    const rowGap = 7;
+    const rowH = (availableH - headerH - rowGap * Math.max(0, dates.length - 1)) / dates.length;
+
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillStyle = c.secondaryText;
+    ctx.font = "700 13px " + settings.fontFamily;
+    ctx.fillText("DAY / DATE", margin + dayW / 2, top + headerH / 2);
+    slots.forEach((slot, i) => {
+      const x = gridX + i * (slotW + colGap);
+      roundedRect(ctx, x, top, slotW, headerH, 15);
+      ctx.fillStyle = c.accent;
+      ctx.fill();
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "700 11px " + settings.fontFamily;
+      ctx.fillText("PERIOD " + (i + 1), x + slotW / 2, top + headerH * 0.32);
+      ctx.font = "700 " + Math.max(14, Math.min(21, settings.timeSize)) + "px " + settings.fontFamily;
+      ctx.fillText(clock(slot.start) + " – " + clock(slot.end), x + slotW / 2, top + headerH * 0.68, slotW - 8);
+    });
+
+    dates.forEach((date, ri) => {
+      const y = top + headerH + ri * (rowH + rowGap);
+      const dt = toDate(date);
+      roundedRect(ctx, margin, y, dayW, rowH, 15);
+      ctx.fillStyle = c.header;
+      ctx.fill();
+      ctx.fillStyle = c.title;
+      ctx.font = "700 " + Math.max(13, Math.min(19, settings.dateSize)) + "px " + settings.fontFamily;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(new Intl.DateTimeFormat("en", { weekday: "long", timeZone: "UTC" }).format(dt), margin + dayW / 2, y + rowH * 0.43, dayW - 8);
+      ctx.fillStyle = c.secondaryText;
+      ctx.font = "500 " + Math.max(10, Math.min(14, settings.dateSize - 5)) + "px " + settings.fontFamily;
+      ctx.fillText(new Intl.DateTimeFormat("en", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(dt), margin + dayW / 2, y + rowH * 0.68, dayW - 8);
+
+      const dayExams = ordered.filter((e) => e.date === date);
+      slots.forEach((slot, si) => {
+        const x = gridX + si * (slotW + colGap);
+        const matches = dayExams.filter((e) => e.startTime === slot.start && e.endTime === slot.end);
+        ctx.save();
+        ctx.setLineDash([5, 5]);
+        ctx.strokeStyle = c.border;
+        ctx.lineWidth = 1.5;
+        roundedRect(ctx, x, y, slotW, rowH, 13);
+        ctx.stroke();
+        ctx.restore();
+        if (!matches.length) return;
+        const inset = 8;
+        const innerGap = 5;
+        const cardH = (rowH - inset * 2 - innerGap * (matches.length - 1)) / matches.length;
+        matches.forEach((exam, ei) => {
+          const cy = y + inset + ei * (cardH + innerGap);
+          roundedRect(ctx, x, cy, slotW, cardH, 12);
+          ctx.fillStyle = c.card;
+          ctx.fill();
+          const chipSize = Math.max(9, Math.min(12, settings.dateSize - 7));
+          const chip = dayLabel(exam.date, { day: "numeric", month: "short" }).toUpperCase();
+          ctx.font = "700 " + chipSize + "px " + settings.fontFamily;
+          const chipW = Math.min(slotW - 16, ctx.measureText(chip).width + 14);
+          roundedRect(ctx, x + 8, cy + 7, chipW, chipSize + 8, 8);
+          ctx.fillStyle = c.accent;
+          ctx.fill();
+          ctx.fillStyle = "#FFFFFF";
+          ctx.textAlign = "left";
+          ctx.textBaseline = "top";
+          ctx.fillText(chip, x + 15, cy + 11);
+          const courseSize = Math.max(11, Math.min(settings.courseSize, cardH * 0.22));
+          drawText(ctx, exam.courseName, x + 9, cy + chipSize + 21, slotW - 18,
+            "700 " + courseSize + "px " + settings.fontFamily, c.cardText, "left", 2, 1.12);
+          const timeSize = Math.max(9, Math.min(settings.timeSize - 5, cardH * 0.15));
+          const badgeY = cy + cardH - timeSize - 13;
+          roundedRect(ctx, x + 8, badgeY, slotW - 16, timeSize + 9, 8);
+          ctx.fillStyle = c.timeBadge;
+          ctx.fill();
+          ctx.fillStyle = c.timeText;
+          ctx.font = "600 " + timeSize + "px " + settings.fontFamily;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(clock(exam.startTime) + " – " + clock(exam.endTime), x + slotW / 2, badgeY + (timeSize + 9) / 2, slotW - 24);
+        });
+      });
+      if (!dayExams.length) {
+        ctx.save();
+        ctx.fillStyle = c.header;
+        ctx.globalAlpha = 0.35;
+        roundedRect(ctx, gridX, y, gridW, rowH, 13);
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = c.secondaryText;
+        ctx.font = "700 15px " + settings.fontFamily;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("NO EXAMS", gridX + gridW / 2, y + rowH / 2);
+        ctx.restore();
+      }
+    });
+  };
+
   const drawDayCells = (calendar: boolean) => {
     const dates = Array.from(new Set(ordered.map((exam) => exam.date))).sort();
     const cols = 2;
@@ -285,8 +406,8 @@ function renderCanvas(
     drawAgenda();
   } else if (settings.template === "day-columns") {
     drawDayCells(false);
-  } else if (settings.template === "calendar-grid") {
-    drawDayCells(true);
+  } else if (settings.template === "timetable") {
+    drawTimetable();
   } else {
     const columns = 2;
     const cardGap = gap;
