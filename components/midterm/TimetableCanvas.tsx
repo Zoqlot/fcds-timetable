@@ -160,7 +160,7 @@ if (settings.showTime) {
     ctx.font = "700 " + timeFont + "px " + settings.fontFamily;
     const badgeWidth = Math.min(available, ctx.measureText(label).width + (compact ? 18 : 28));
     const badgeX = align === "center" ? textX - badgeWidth / 2 : align === "right" ? right - badgeWidth : left;
-    const badgeHeight = timeFont + (compact ? 12 : 18);
+    const badgeHeight = timeFont + (condensedDate ? 4 : compact ? 12 : 18);
     roundedRect(ctx, badgeX, badgeY, badgeWidth, badgeHeight, Math.min(14, badgeHeight / 2));
     ctx.fillStyle = c.timeBadge;
     ctx.fill();
