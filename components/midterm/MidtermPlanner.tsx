@@ -99,7 +99,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   useEffect(() => {
     const saved = loadPreferences(sessionId);
     if (saved) {
-      setSelectedIds(saved.selectedExamIds ?? []);
+      setSelectedIds((saved.selectedExamIds ?? []).slice(0, 7));
       setSettings(normalizeDesignSettings({ ...DEFAULT_SETTINGS, ...(saved.settings ?? {}), colors: { ...DEFAULT_SETTINGS.colors, ...(saved.settings?.colors ?? {}) } }));
       setTitle(saved.title ?? "MY MIDTERM EXAMS");
       setSubtitle(saved.subtitle ?? sessionName.toUpperCase());
@@ -173,7 +173,14 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     setFooter("Small steps every day lead to big results.");
   };
   const toggleExam = (id: string) => {
-    setSelectedIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
+    setSelectedIds((current) => {
+      if (current.includes(id)) return current.filter((item) => item !== id);
+      if (current.length >= 7) {
+        setNotice("You can select up to 7 subjects.");
+        return current;
+      }
+      return [...current, id];
+    });
   };
   const exportJpg = async () => {
     const canvas = canvasRef.current;
@@ -287,35 +294,6 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
           <input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
         </Field>
       </Section>
-      <Section title="Typography">
-        <div className="rounded-xl bg-zinc-50 p-3 text-xs leading-6 text-zinc-600">
-          <p className="font-bold text-zinc-800">Fixed bold typography</p>
-          <p>Title: 48 px · Course name: 27 px</p>
-          <p>Date: 21 px · Exam time: 21 px</p>
-        </div>
-        <Field label="Font family">
-          <select className={inputClass} value={settings.fontFamily} onChange={(e) => update({ fontFamily: e.target.value })}>
-            <option value="Arial">Arial</option><option value="system-ui">System</option><option value="Verdana">Verdana</option><option value="Georgia">Georgia</option><option value="Trebuchet MS">Trebuchet MS</option>
-          </select>
-        </Field>
-        <Field label="Text alignment">
-          <div className="grid grid-cols-3 gap-1 rounded-xl bg-zinc-100 p-1">
-            {(["left", "center", "right"] as const).map((value) => (
-              <button key={value} type="button" onClick={() => update({ textAlign: value })}
-                className={"rounded-lg px-2 py-2 text-xs font-semibold capitalize " + (settings.textAlign === value ? "bg-white text-violet-700 shadow-sm" : "text-zinc-500")}>{value}</button>
-            ))}
-          </div>
-        </Field>
-      </Section>
-      <Section title="Included on every timetable">
-        <div className="space-y-2 text-xs text-zinc-600">
-          <p>✓ Course name</p>
-          <p>✓ Exam date and day name</p>
-          <p>✓ Exam time</p>
-          <p>✓ FCDS label</p>
-          <p>✓ A motivational quote in the footer, selected randomly at download</p>
-        </div>
-      </Section>
     </div>
   );
 
@@ -382,13 +360,13 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             </div>
 
             <div className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm sm:p-5">
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><div><h2 className="font-bold">Choose your subjects</h2><p className="mt-0.5 text-xs text-zinc-500">You can mix courses from any academic year.</p></div><span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700">{selectedIds.length} selected</span></div>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3"><div><h2 className="font-bold">Choose your subjects</h2><p className="mt-0.5 text-xs text-zinc-500">Choose up to 7 subjects from any academic year.</p></div><span className="rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700">{selectedIds.length}/7 selected</span></div>
               <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_145px_180px]">
                 <div className="relative"><Search className="absolute left-3 top-3 h-4 w-4 text-zinc-400" /><input className={inputClass + " pl-9"} placeholder="Search subject or course code..." value={query} onChange={(e) => setQuery(e.target.value)} /></div>
                 <select className={inputClass} value={yearFilter} onChange={(e) => setYearFilter(e.target.value)}>{years.map((year) => <option key={year.value} value={year.value}>{year.label}</option>)}</select>
                 <select className={inputClass} value={dayFilter} onChange={(e) => setDayFilter(e.target.value)}><option value="all">All exam days</option>{days.map((day) => <option key={day} value={day}>{dayLabel(day)}</option>)}</select>
               </div>
-              <div className="mt-3 flex items-center justify-between gap-2"><span className="text-xs text-zinc-400">{visibleExams.length} matching subjects</span><button type="button" onClick={() => setSelectedIds((current) => Array.from(new Set([...current, ...visibleExams.map((exam) => exam.id)])))} className="text-xs font-bold text-violet-700 hover:text-violet-900">Select all visible</button></div>
+              <div className="mt-3 flex items-center justify-between gap-2"><span className="text-xs text-zinc-400">{visibleExams.length} matching subjects · {Math.max(0, 7 - selectedIds.length)} selections left</span><button type="button" onClick={() => setSelectedIds((current) => Array.from(new Set([...current, ...visibleExams.map((exam) => exam.id)])).slice(0, 7))} className="text-xs font-bold text-violet-700 hover:text-violet-900">Select all visible</button></div>
               <div className="mt-3 divide-y divide-zinc-100">
                 {visibleExams.map((exam) => {
                   const checked = selectedIds.includes(exam.id);
