@@ -18,6 +18,7 @@ export const DEFAULT_SETTINGS: DesignSettings = {
   direction: "vertical",
   width: 1080,
   height: 1527,
+  lockAspectRatio: true,
   theme: "violet",
   colors: THEMES[0].colors,
   cardShape: "rounded",

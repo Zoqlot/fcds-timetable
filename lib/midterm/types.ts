@@ -20,6 +20,7 @@ export type DesignSettings = {
   direction: "vertical" | "horizontal";
   width: number;
   height: number;
+  lockAspectRatio: boolean;
   theme: string;
   colors: ThemeColors;
   cardShape: "square" | "rounded" | "pill";

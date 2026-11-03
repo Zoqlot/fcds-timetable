@@ -48,13 +48,13 @@ const inputClass = "w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 
 
 function Toggle({ label, checked, onChange }: { label: string; checked: boolean; onChange: (value: boolean) => void }) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-3 py-1.5 text-sm text-zinc-700">
+    <div className="flex cursor-pointer items-center justify-between gap-3 py-1.5 text-sm text-zinc-700">
       <span>{label}</span>
-      <button type="button" role="switch" aria-checked={checked} onClick={() => onChange(!checked)}
+      <button type="button" role="switch" aria-label={label} aria-checked={checked} onClick={() => onChange(!checked)}
         className={"relative h-6 w-11 shrink-0 rounded-full transition " + (checked ? "bg-violet-600" : "bg-zinc-200")}>
         <span className={"absolute top-1 h-4 w-4 rounded-full bg-white shadow transition-all " + (checked ? "left-6" : "left-1")} />
       </button>
-    </label>
+    </div>
   );
 }
 
@@ -145,18 +145,18 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   }, [exams, query, yearFilter, dayFilter]);
 
   const update = (patch: Partial<DesignSettings>) => {
-    setSettings((current) => {
-      setUndoStack((past) => [...past.slice(-24), current]);
-      setRedoStack([]);
-      return { ...current, ...patch };
-    });
+    setUndoStack((past) => [...past.slice(-24), settings]);
+    setRedoStack([]);
+    setSettings((current) => ({ ...current, ...patch }));
   };
   const updateColor = (key: keyof ThemeColors, value: string) => {
-    setSettings((current) => {
-      setUndoStack((past) => [...past.slice(-24), current]);
-      setRedoStack([]);
-      return { ...current, theme: "custom", colors: { ...current.colors, [key]: value } };
-    });
+    setUndoStack((past) => [...past.slice(-24), settings]);
+    setRedoStack([]);
+    setSettings((current) => ({
+      ...current,
+      theme: "custom",
+      colors: { ...current.colors, [key]: value },
+    }));
   };
   const chooseTheme = (id: string) => {
     const theme = THEMES.find((item) => item.id === id);
@@ -232,7 +232,11 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   };
   const updateDimension = (key: "width" | "height", value: number) => {
     const safe = Math.max(320, Math.min(5000, Math.round(value || 320)));
-    const next = { ...settings, [key]: safe, orientation: "custom" as const };
+    const ratio = settings.width / settings.height;
+    const dimensions = key === "width"
+      ? { width: safe, height: settings.lockAspectRatio ? Math.max(320, Math.min(5000, Math.round(safe / ratio))) : settings.height }
+      : { height: safe, width: settings.lockAspectRatio ? Math.max(320, Math.min(5000, Math.round(safe * ratio))) : settings.width };
+    const next = { ...dimensions, orientation: "custom" as const };
     if (next.width * next.height > 18000000) {
       setExportError("This size is too large. Keep the total below 18 megapixels.");
       return;
@@ -295,9 +299,12 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             </button>
           ))}
         </div>
-        {settings.orientation === "custom" && <div className="grid grid-cols-2 gap-2">
-          <Field label="Width (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.width} onChange={(e) => updateDimension("width", Number(e.target.value))} /></Field>
-          <Field label="Height (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.height} onChange={(e) => updateDimension("height", Number(e.target.value))} /></Field>
+        {settings.orientation === "custom" && <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-2">
+            <Field label="Width (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.width} onChange={(e) => updateDimension("width", Number(e.target.value))} /></Field>
+            <Field label="Height (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.height} onChange={(e) => updateDimension("height", Number(e.target.value))} /></Field>
+          </div>
+          <Toggle label="Lock aspect ratio" checked={settings.lockAspectRatio} onChange={(value) => update({ lockAspectRatio: value })} />
         </div>}
         <Field label={"Page margins · " + settings.margins + " px"}>
           <input className="w-full accent-violet-600" type="range" min="24" max="110" value={settings.margins} onChange={(e) => update({ margins: Number(e.target.value) })} />
