@@ -50,8 +50,10 @@ export const SIZE_PRESETS = [
 ];
 
 export function normalizeDesignSettings(settings: DesignSettings): DesignSettings {
+  const savedTemplate = (settings as DesignSettings & { template: string }).template;
   return {
     ...settings,
+    template: savedTemplate === "calendar-grid" ? "timetable" : settings.template,
     orientation: "portrait",
     direction: "vertical",
     width: 2480,
