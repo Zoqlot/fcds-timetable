@@ -4,25 +4,23 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import {
-  ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CalendarDays, Check, CheckCircle2,
-  Download, Eye, LayoutGrid, ListOrdered, Loader2, Palette,
-  RotateCcw, Search, Sparkles, WandSparkles, X, AlertTriangle,
-  BookOpen, Image as ImageIcon, Type, SlidersHorizontal, Save, Trash2, Undo2, Redo2
+  ArrowLeft, ArrowRight, CalendarDays, Check, CheckCircle2, Download, Eye,
+  LayoutGrid, Loader2, Palette, RotateCcw, Search, Sparkles, WandSparkles, X,
+  AlertTriangle, BookOpen, Image as ImageIcon, Type, Undo2, Redo2
 } from "lucide-react";
-import type { DesignSettings, MidtermExam, MidtermPreferences, SavedStyle, ThemeColors } from "@/lib/midterm/types";
-import { DEFAULT_SETTINGS, SIZE_PRESETS, THEMES } from "@/lib/midterm/presets";
+import type { DesignSettings, MidtermExam, MidtermPreferences, ThemeColors } from "@/lib/midterm/types";
+import { DEFAULT_SETTINGS, normalizeDesignSettings, SIZE_PRESETS, THEMES } from "@/lib/midterm/presets";
 import { dayLabel, findExamConflicts, sortExams, timeLabel } from "@/lib/midterm/conflicts";
 import { loadPreferences, savePreferences } from "@/lib/midterm/storage";
 import { downloadCanvasAsJpg } from "@/lib/midterm/export-jpg";
 import TimetableCanvas from "./TimetableCanvas";
 
 type Props = { sessionId: string; sessionName: string; exams: MidtermExam[] };
-type Tab = "layout" | "colors" | "appearance" | "content" | "export";
+type Tab = "layout" | "colors" | "content" | "export";
 
 const tabItems: { id: Tab; label: string; icon: typeof LayoutGrid }[] = [
   { id: "layout", label: "Layout", icon: LayoutGrid },
   { id: "colors", label: "Colors", icon: Palette },
-  { id: "appearance", label: "Style", icon: SlidersHorizontal },
   { id: "content", label: "Text", icon: Type },
   { id: "export", label: "Export", icon: ImageIcon },
 ];
@@ -47,18 +45,6 @@ const primaryClass = buttonClass + " bg-violet-600 text-white shadow-sm hover:bg
 const secondaryClass = buttonClass + " border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50";
 const inputClass = "w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-800 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100";
 
-function Toggle({ label, checked, onChange }: { label: string; checked: boolean; onChange: (value: boolean) => void }) {
-  return (
-    <div className="flex cursor-pointer items-center justify-between gap-3 py-1.5 text-sm text-zinc-700">
-      <span>{label}</span>
-      <button type="button" role="switch" aria-label={label} aria-checked={checked} onClick={() => onChange(!checked)}
-        className={"relative h-6 w-11 shrink-0 rounded-full transition " + (checked ? "bg-violet-600" : "bg-zinc-200")}>
-        <span className={"absolute top-1 h-4 w-4 rounded-full bg-white shadow transition-all " + (checked ? "left-6" : "left-1")} />
-      </button>
-    </div>
-  );
-}
-
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return <label className="block space-y-1.5"><span className="text-xs font-semibold text-zinc-500">{label}</span>{children}</label>;
 }
@@ -67,16 +53,28 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   return <section className="space-y-3 border-b border-zinc-100 pb-4 last:border-0 last:pb-0"><h3 className="text-xs font-black uppercase tracking-wider text-zinc-400">{title}</h3>{children}</section>;
 }
 
-function Segmented<T extends string>({
-  value, options, onChange
-}: { value: T; options: { value: T; label: string }[]; onChange: (value: T) => void }) {
-  return <div className="grid grid-cols-2 gap-1 rounded-xl bg-zinc-100 p-1">
-    {options.map((option) => <button key={option.value} type="button" onClick={() => onChange(option.value)}
-      className={"rounded-lg px-2 py-2 text-xs font-semibold transition " + (value === option.value ? "bg-white text-violet-700 shadow-sm" : "text-zinc-500 hover:text-zinc-800")}>
-      {option.label}
-    </button>)}
-  </div>;
-}
+const MOTIVATIONAL_QUOTES = [
+  "Small steps every day lead to big results.",
+  "Trust your preparation and do your best.",
+  "You are capable of more than you imagine.",
+  "Focus on progress, not perfection.",
+  "Every question is a chance to grow.",
+  "Stay calm, stay focused, keep going.",
+  "Your effort today builds your success tomorrow.",
+  "One exam does not define your potential.",
+  "Believe in yourself and the work you have done.",
+  "Great things take time. Keep learning.",
+  "بالتوفيق، أنتم قدّها!",
+  "كل خطوة صغيرة تقرّبك من النجاح.",
+  "ثق بنفسك وبكل ما بذلته من جهد.",
+  "اهدأ، ركّز، وابذل أفضل ما لديك.",
+  "التعب اليوم هو نجاح الغد.",
+  "لا تستسلم، فكل محاولة تقوّيك.",
+  "اجعل ثقتك بنفسك أكبر من قلقك.",
+  "أنت قادر على تحقيق ما تطمح إليه.",
+  "ابدأ بثقة، وأكمل بإصرار.",
+  "وراء كل إنجاز صبر واجتهاد.",
+];
 
 export default function MidtermPlanner({ sessionId, sessionName, exams }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -89,11 +87,8 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   const [settings, setSettings] = useState<DesignSettings>(DEFAULT_SETTINGS);
   const [title, setTitle] = useState("MY MIDTERM EXAMS");
   const [subtitle, setSubtitle] = useState(sessionName.toUpperCase());
-  const [footer, setFooter] = useState("Good luck with your exams!");
-  const [studentName, setStudentName] = useState("");
+  const [footer, setFooter] = useState("Small steps every day lead to big results.");
   const [filename, setFilename] = useState("my-midterm-timetable");
-  const [savedStyles, setSavedStyles] = useState<SavedStyle[]>([]);
-  const [styleName, setStyleName] = useState("My style");
   const [undoStack, setUndoStack] = useState<DesignSettings[]>([]);
   const [redoStack, setRedoStack] = useState<DesignSettings[]>([]);
   const [ready, setReady] = useState(false);
@@ -105,32 +100,26 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     const saved = loadPreferences(sessionId);
     if (saved) {
       setSelectedIds(saved.selectedExamIds ?? []);
-      setSettings({ ...DEFAULT_SETTINGS, ...(saved.settings ?? {}), colors: { ...DEFAULT_SETTINGS.colors, ...(saved.settings?.colors ?? {}) } });
+      setSettings(normalizeDesignSettings({ ...DEFAULT_SETTINGS, ...(saved.settings ?? {}), colors: { ...DEFAULT_SETTINGS.colors, ...(saved.settings?.colors ?? {}) } }));
       setTitle(saved.title ?? "MY MIDTERM EXAMS");
       setSubtitle(saved.subtitle ?? sessionName.toUpperCase());
-      setFooter(saved.footer ?? "Good luck with your exams!");
-      setStudentName(saved.studentName ?? "");
-      setSavedStyles(saved.savedStyles ?? []);
     }
     setReady(true);
   }, [sessionId, sessionName]);
 
   useEffect(() => {
     if (!ready) return;
-    const preferences: MidtermPreferences = {
-      selectedExamIds: selectedIds, settings, title, subtitle, footer,
-      studentName, savedStyles
-    };
+    const preferences: MidtermPreferences = { selectedExamIds: selectedIds, settings, title, subtitle };
     savePreferences(sessionId, preferences);
-  }, [ready, sessionId, selectedIds, settings, title, subtitle, footer, studentName, savedStyles]);
+  }, [ready, sessionId, selectedIds, settings, title, subtitle]);
 
   const selectedExams = useMemo(
     () => exams.filter((exam) => selectedIds.includes(exam.id)),
     [exams, selectedIds]
   );
   const orderedSelected = useMemo(
-    () => sortExams(selectedExams, settings.order, settings.manualExamOrderIds),
-    [selectedExams, settings.order, settings.manualExamOrderIds]
+    () => sortExams(selectedExams, "chronological", []),
+    [selectedExams]
   );
   const conflicts = useMemo(() => findExamConflicts(selectedExams), [selectedExams]);
   const days = useMemo(() => Array.from(new Set(exams.map((exam) => exam.date))).sort(), [exams]);
@@ -148,12 +137,12 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   const update = (patch: Partial<DesignSettings>) => {
     setUndoStack((past) => [...past.slice(-24), settings]);
     setRedoStack([]);
-    setSettings((current) => ({ ...current, ...patch }));
+    setSettings((current) => normalizeDesignSettings({ ...current, ...patch }));
   };
   const updateColor = (key: keyof ThemeColors, value: string) => {
     setUndoStack((past) => [...past.slice(-24), settings]);
     setRedoStack([]);
-    setSettings((current) => ({
+    setSettings((current) => normalizeDesignSettings({
       ...current,
       theme: "custom",
       colors: { ...current.colors, [key]: value },
@@ -166,13 +155,13 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   const undo = () => {
     if (!undoStack.length) return;
     setRedoStack((future) => [settings, ...future]);
-    setSettings(undoStack[undoStack.length - 1]);
+    setSettings(normalizeDesignSettings(undoStack[undoStack.length - 1]));
     setUndoStack((past) => past.slice(0, -1));
   };
   const redo = () => {
     if (!redoStack.length) return;
     setUndoStack((past) => [...past, settings]);
-    setSettings(redoStack[0]);
+    setSettings(normalizeDesignSettings(redoStack[0]));
     setRedoStack((future) => future.slice(1));
   };
   const resetDesign = () => {
@@ -181,40 +170,10 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     setSettings(DEFAULT_SETTINGS);
     setTitle("MY MIDTERM EXAMS");
     setSubtitle(sessionName.toUpperCase());
-    setFooter("Good luck with your exams!");
-    setStudentName("");
-  };
-  const randomize = () => {
-    const choices = THEMES.filter((item) => item.id !== settings.theme);
-    const chosen = choices[Math.floor(Math.random() * choices.length)];
-    chooseTheme(chosen.id);
-    const shapes: DesignSettings["cardShape"][] = ["square", "rounded", "pill"];
-    update({ cardShape: shapes[Math.floor(Math.random() * shapes.length)] });
+    setFooter("Small steps every day lead to big results.");
   };
   const toggleExam = (id: string) => {
     setSelectedIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
-  };
-  const moveExam = (id: string, direction: -1 | 1) => {
-    const index = settings.manualExamOrderIds.length
-      ? settings.manualExamOrderIds.indexOf(id)
-      : orderedSelected.findIndex((exam) => exam.id === id);
-    const current = orderedSelected.map((exam) => exam.id);
-    const from = index < 0 ? current.indexOf(id) : index;
-    const to = Math.max(0, Math.min(current.length - 1, from + direction));
-    if (from < 0 || from === to) return;
-    const next = [...current];
-    [next[from], next[to]] = [next[to], next[from]];
-    update({ order: "manual", manualExamOrderIds: next });
-  };
-  const saveStyle = () => {
-    const style: SavedStyle = {
-      id: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : String(Date.now()),
-      name: styleName.trim() || "My style",
-      settings: JSON.parse(JSON.stringify(settings)) as DesignSettings,
-      createdAt: Date.now(),
-    };
-    setSavedStyles((current) => [...current, style]);
-    setNotice("Style saved on this device.");
   };
   const exportJpg = async () => {
     const canvas = canvasRef.current;
@@ -222,6 +181,10 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     setExportError("");
     setExporting(true);
     try {
+      const availableQuotes = MOTIVATIONAL_QUOTES.filter((item) => item !== footer);
+      const quote = availableQuotes[Math.floor(Math.random() * availableQuotes.length)];
+      setFooter(quote);
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       await downloadCanvasAsJpg(canvas, { filename, quality: settings.quality });
       setNotice("Your JPG timetable is ready.");
@@ -230,20 +193,6 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     } finally {
       setExporting(false);
     }
-  };
-  const updateDimension = (key: "width" | "height", value: number) => {
-    const safe = Math.max(320, Math.min(5000, Math.round(value || 320)));
-    const ratio = settings.width / settings.height;
-    const dimensions = key === "width"
-      ? { width: safe, height: settings.lockAspectRatio ? Math.max(320, Math.min(5000, Math.round(safe / ratio))) : settings.height }
-      : { height: safe, width: settings.lockAspectRatio ? Math.max(320, Math.min(5000, Math.round(safe * ratio))) : settings.width };
-    const next = { ...dimensions, orientation: "custom" as const };
-    if (next.width * next.height > 18000000) {
-      setExportError("This size is too large. Keep the total below 18 megapixels.");
-      return;
-    }
-    setExportError("");
-    update(next);
   };
   const applySize = (preset: typeof SIZE_PRESETS[number]) => {
     update({ width: preset.width, height: preset.height, orientation: preset.orientation });
@@ -259,8 +208,8 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
 
   const renderLayoutTab = () => (
     <div className="space-y-5">
-      <Section title="Composition">
-        <Field label="Timetable template">
+      <Section title="Timetable layout">
+        <Field label="Template">
           <div className="grid grid-cols-2 gap-2">
             {([
               ["agenda", "Agenda", ListOrdered],
@@ -275,54 +224,23 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             ))}
           </div>
         </Field>
-        <Field label="Page orientation">
-          <Segmented value={settings.orientation} onChange={(value) => {
-            if (value === "portrait") update({ orientation: value, width: 1080, height: 1527 });
-            if (value === "landscape") update({ orientation: value, width: 1527, height: 1080 });
-            if (value === "square") update({ orientation: value, width: 1080, height: 1080 });
-            if (value === "custom") update({ orientation: value });
-          }} options={[
-            { value: "portrait", label: "Portrait" }, { value: "landscape", label: "Landscape" },
-            { value: "square", label: "Square" }, { value: "custom", label: "Custom" },
-          ]} />
-        </Field>
-        <Field label="Content direction">
-          <Segmented value={settings.direction} onChange={(value) => update({ direction: value })}
-            options={[{ value: "vertical", label: "Vertical" }, { value: "horizontal", label: "Horizontal" }]} />
-        </Field>
       </Section>
       <Section title="Page size">
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 gap-2">
           {SIZE_PRESETS.map((preset) => (
             <button key={preset.id} type="button" onClick={() => applySize(preset)}
-              className={"rounded-xl border px-2.5 py-2 text-left text-xs font-semibold " + (settings.width === preset.width && settings.height === preset.height ? "border-violet-400 bg-violet-50 text-violet-800" : "border-zinc-200 text-zinc-600 hover:bg-zinc-50")}>
-              {preset.label}<span className="mt-0.5 block text-[10px] font-normal text-zinc-400">{preset.width} × {preset.height}</span>
+              className={"flex items-center justify-between rounded-xl border px-3 py-3 text-left text-xs font-semibold " + (settings.width === preset.width && settings.height === preset.height ? "border-violet-400 bg-violet-50 text-violet-800" : "border-zinc-200 text-zinc-600 hover:bg-zinc-50")}>
+              <span>{preset.label}</span>
+              <span className="text-[10px] font-normal text-zinc-400">{preset.width} × {preset.height} px</span>
             </button>
           ))}
         </div>
-        {settings.orientation === "custom" && <div className="space-y-2">
-          <div className="grid grid-cols-2 gap-2">
-            <Field label="Width (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.width} onChange={(e) => updateDimension("width", Number(e.target.value))} /></Field>
-            <Field label="Height (px)"><input className={inputClass} type="number" min="320" max="5000" value={settings.height} onChange={(e) => updateDimension("height", Number(e.target.value))} /></Field>
-          </div>
-          <Toggle label="Lock aspect ratio" checked={settings.lockAspectRatio} onChange={(value) => update({ lockAspectRatio: value })} />
-        </div>}
-        <Field label={"Page margins · " + settings.margins + " px"}>
-          <input className="w-full accent-violet-600" type="range" min="24" max="110" value={settings.margins} onChange={(e) => update({ margins: Number(e.target.value) })} />
-        </Field>
-        <Field label="Card spacing"><select className={inputClass} value={settings.spacing} onChange={(e) => update({ spacing: e.target.value as DesignSettings["spacing"] })}>
-          <option value="compact">Compact</option><option value="normal">Normal</option><option value="spacious">Spacious</option>
-        </select></Field>
-      </Section>
-      <Section title="Ordering">
-        <Field label="Exam order"><select className={inputClass} value={settings.order} onChange={(e) => update({ order: e.target.value as DesignSettings["order"] })}>
-          <option value="chronological">Chronological</option><option value="alphabetical">Alphabetical</option><option value="manual">My manual order</option>
-        </select></Field>
+        <p className="text-[11px] text-zinc-400">The design is fixed to vertical content, 50 px margins and normal card spacing.</p>
       </Section>
     </div>
   );
 
-  const renderColorsTab = () => (
+    const renderColorsTab = () => (
     <div className="space-y-5">
       <Section title="Theme presets">
         <div className="grid grid-cols-3 gap-2">
@@ -339,7 +257,11 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             </button>
           ))}
         </div>
-        <button type="button" onClick={randomize} className={secondaryClass + " w-full"}><WandSparkles className="h-4 w-4" /> Randomize palette & shape</button>
+        <button type="button" onClick={() => {
+          const choices = THEMES.filter((item) => item.id !== settings.theme);
+          const chosen = choices[Math.floor(Math.random() * choices.length)];
+          if (chosen) chooseTheme(chosen.id);
+        }} className={secondaryClass + " w-full"}><WandSparkles className="h-4 w-4" /> Randomize palette</button>
       </Section>
       <Section title="Individual colors">
         <div className="grid grid-cols-2 gap-2">
@@ -355,58 +277,49 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     </div>
   );
 
-  const renderAppearanceTab = () => (
-    <div className="space-y-5">
-      <Section title="Cards">
-        <Field label="Card shape"><Segmented value={settings.cardShape} onChange={(value) => update({ cardShape: value })}
-          options={[{ value: "square", label: "Square" }, { value: "rounded", label: "Rounded" }, { value: "pill", label: "Pill" }]} /></Field>
-        <Field label={"Corner radius · " + settings.cardRadius + " px"}><input className="w-full accent-violet-600" type="range" min="0" max="48" value={settings.cardRadius} onChange={(e) => update({ cardRadius: Number(e.target.value) })} /></Field>
-        <Field label={"Border width · " + settings.borderWidth + " px"}><input className="w-full accent-violet-600" type="range" min="0" max="8" value={settings.borderWidth} onChange={(e) => update({ borderWidth: Number(e.target.value) })} /></Field>
-        <Field label="Shadow"><select className={inputClass} value={settings.shadow} onChange={(e) => update({ shadow: e.target.value as DesignSettings["shadow"] })}><option value="none">None</option><option value="subtle">Subtle</option><option value="strong">Strong</option></select></Field>
-        <Field label="Accent decoration"><select className={inputClass} value={settings.decoration} onChange={(e) => update({ decoration: e.target.value as DesignSettings["decoration"] })}><option value="none">None</option><option value="left-stripe">Left stripe</option><option value="top-stripe">Top stripe</option></select></Field>
-      </Section>
-      <Section title="Page styling">
-        <Field label="Background style"><Segmented value={settings.backgroundStyle} onChange={(value) => update({ backgroundStyle: value })}
-          options={[{ value: "solid", label: "Solid" }, { value: "gradient", label: "Gradient" }, { value: "pattern", label: "Pattern" }]} /></Field>
-        <Field label="Header style"><select className={inputClass} value={settings.headerStyle} onChange={(e) => update({ headerStyle: e.target.value as DesignSettings["headerStyle"] })}><option value="minimal">Minimal</option><option value="plain">Color band</option><option value="banner">Rounded banner</option></select></Field>
-      </Section>
-    </div>
-  );
-
   const renderContentTab = () => (
     <div className="space-y-5">
       <Section title="Text content">
-        <Field label="Main heading"><input className={inputClass} maxLength={60} value={title} onChange={(e) => setTitle(e.target.value)} /></Field>
-        <Field label="Subtitle"><input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} /></Field>
-        <Field label="Your name (optional)"><input className={inputClass} maxLength={45} placeholder="Add your name..." value={studentName} onChange={(e) => setStudentName(e.target.value)} /></Field>
-        <Field label="Footer message"><input className={inputClass} maxLength={80} value={footer} onChange={(e) => setFooter(e.target.value)} /></Field>
+        <Field label="Main heading / your name">
+          <input className={inputClass} maxLength={60} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Write your name or heading..." />
+        </Field>
+        <Field label="Subtitle">
+          <input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
+        </Field>
       </Section>
       <Section title="Typography">
-        <Field label="Font family"><select className={inputClass} value={settings.fontFamily} onChange={(e) => update({ fontFamily: e.target.value })}>
-          <option value="Arial">Arial</option><option value="system-ui">System</option><option value="Verdana">Verdana</option><option value="Georgia">Georgia</option><option value="Trebuchet MS">Trebuchet MS</option><option value="Courier New">Courier New</option>
-        </select></Field>
-        <Field label={"Title size · " + settings.titleSize}><input className="w-full accent-violet-600" type="range" min="28" max="76" value={settings.titleSize} onChange={(e) => update({ titleSize: Number(e.target.value) })} /></Field>
-        <Field label={"Course name size · " + settings.courseSize}><input className="w-full accent-violet-600" type="range" min="16" max="42" value={settings.courseSize} onChange={(e) => update({ courseSize: Number(e.target.value) })} /></Field>
-        <Field label={"Date size · " + settings.dateSize}><input className="w-full accent-violet-600" type="range" min="12" max="30" value={settings.dateSize} onChange={(e) => update({ dateSize: Number(e.target.value) })} /></Field>
-        <Field label={"Time size · " + settings.timeSize}><input className="w-full accent-violet-600" type="range" min="12" max="30" value={settings.timeSize} onChange={(e) => update({ timeSize: Number(e.target.value) })} /></Field>
-        <Field label="Font weight"><Segmented value={settings.fontWeight} onChange={(value) => update({ fontWeight: value })}
-          options={[{ value: "normal", label: "Normal" }, { value: "medium", label: "Medium" }, { value: "bold", label: "Bold" }]} /></Field>
-        <Field label="Text alignment"><Segmented value={settings.textAlign} onChange={(value) => update({ textAlign: value })}
-          options={[{ value: "left", label: "Left" }, { value: "center", label: "Center" }, { value: "right", label: "Right" }]} /></Field>
+        <div className="rounded-xl bg-zinc-50 p-3 text-xs leading-6 text-zinc-600">
+          <p className="font-bold text-zinc-800">Fixed bold typography</p>
+          <p>Title: 48 px · Course name: 27 px</p>
+          <p>Date: 21 px · Exam time: 21 px</p>
+        </div>
+        <Field label="Font family">
+          <select className={inputClass} value={settings.fontFamily} onChange={(e) => update({ fontFamily: e.target.value })}>
+            <option value="Arial">Arial</option><option value="system-ui">System</option><option value="Verdana">Verdana</option><option value="Georgia">Georgia</option><option value="Trebuchet MS">Trebuchet MS</option>
+          </select>
+        </Field>
+        <Field label="Text alignment">
+          <div className="grid grid-cols-3 gap-1 rounded-xl bg-zinc-100 p-1">
+            {(["left", "center", "right"] as const).map((value) => (
+              <button key={value} type="button" onClick={() => update({ textAlign: value })}
+                className={"rounded-lg px-2 py-2 text-xs font-semibold capitalize " + (settings.textAlign === value ? "bg-white text-violet-700 shadow-sm" : "text-zinc-500")}>{value}</button>
+            ))}
+          </div>
+        </Field>
       </Section>
-      <Section title="Visible information">
-        <Toggle label="Course code" checked={settings.showCourseCode} onChange={(value) => update({ showCourseCode: value })} />
-        <Toggle label="Exam date" checked={settings.showDate} onChange={(value) => update({ showDate: value })} />
-        <Toggle label="Day name" checked={settings.showDayName} onChange={(value) => update({ showDayName: value })} />
-        <Toggle label="Exam time" checked={settings.showTime} onChange={(value) => update({ showTime: value })} />
-        <Toggle label="Academic year label" checked={settings.showYearLabel} onChange={(value) => update({ showYearLabel: value })} />
-        <Toggle label="FCDS label" checked={settings.showBrand} onChange={(value) => update({ showBrand: value })} />
-        <Toggle label="Footer" checked={settings.showFooter} onChange={(value) => update({ showFooter: value })} />
+      <Section title="Included on every timetable">
+        <div className="space-y-2 text-xs text-zinc-600">
+          <p>✓ Course name</p>
+          <p>✓ Exam date and day name</p>
+          <p>✓ Exam time</p>
+          <p>✓ FCDS label</p>
+          <p>✓ A motivational quote in the footer, selected randomly at download</p>
+        </div>
       </Section>
     </div>
   );
 
-  const renderExportTab = () => (
+    const renderExportTab = () => (
     <div className="space-y-5">
       <Section title="JPG output">
         <div className="rounded-xl bg-violet-50 p-3 text-xs text-violet-800">
@@ -425,25 +338,12 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
         </button>
         {exportError && <p role="alert" className="text-xs text-red-600">{exportError}</p>}
       </Section>
-      <Section title="Save your design">
-        <Field label="Style name"><input className={inputClass} value={styleName} onChange={(e) => setStyleName(e.target.value)} /></Field>
-        <button type="button" onClick={saveStyle} className={secondaryClass + " w-full"}><Save className="h-4 w-4" /> Save current style</button>
-        {savedStyles.length > 0 && <div className="space-y-2">
-          {savedStyles.map((style) => <div key={style.id} className="flex items-center gap-2 rounded-xl border border-zinc-200 p-2">
-            <button type="button" onClick={() => update({ ...style.settings })} className="min-w-0 flex-1 text-left">
-              <span className="block truncate text-xs font-semibold text-zinc-700">{style.name}</span><span className="text-[10px] text-zinc-400">Saved on this device</span>
-            </button>
-            <button type="button" aria-label={"Delete " + style.name} onClick={() => setSavedStyles((current) => current.filter((item) => item.id !== style.id))} className="rounded-lg p-2 text-zinc-400 hover:bg-red-50 hover:text-red-600"><Trash2 className="h-4 w-4" /></button>
-          </div>)}
-        </div>}
-      </Section>
     </div>
   );
 
   const renderActiveTab = () => {
     if (activeTab === "layout") return renderLayoutTab();
     if (activeTab === "colors") return renderColorsTab();
-    if (activeTab === "appearance") return renderAppearanceTab();
     if (activeTab === "content") return renderContentTab();
     return renderExportTab();
   };
@@ -537,7 +437,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
 
           <div className="grid gap-4 xl:grid-cols-[350px_minmax(0,1fr)]">
             <aside className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-              <div className="grid grid-cols-5 border-b border-zinc-100">
+              <div className="grid grid-cols-4 border-b border-zinc-100">
                 {tabItems.map(({ id, label, icon: Icon }) => <button key={id} type="button" onClick={() => setActiveTab(id)} className={"flex min-w-0 flex-col items-center gap-1 px-1 py-3 text-[10px] font-semibold " + (activeTab === id ? "border-b-2 border-violet-600 bg-violet-50/50 text-violet-700" : "text-zinc-400 hover:bg-zinc-50 hover:text-zinc-700")}><Icon className="h-4 w-4" /><span>{label}</span></button>)}
               </div>
               <div className="max-h-[calc(100vh-230px)] space-y-5 overflow-y-auto p-4">
@@ -552,10 +452,9 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-[#e9e9ee] p-3 shadow-inner sm:p-6">
                 <div className="mx-auto w-full" style={{ maxWidth: settings.width > settings.height ? "1200px" : "760px" }}>
-                  <TimetableCanvas canvasRef={canvasRef} exams={orderedSelected} settings={settings} title={title} subtitle={subtitle} footer={settings.showFooter ? footer : ""} studentName={studentName} />
+                  <TimetableCanvas canvasRef={canvasRef} exams={orderedSelected} settings={settings} title={title} subtitle={subtitle} footer={footer} />
                 </div>
               </div>
-              {settings.order === "manual" && <div className="rounded-2xl border border-zinc-200 bg-white p-4"><div className="mb-3 flex items-center gap-2"><ListOrdered className="h-4 w-4 text-violet-600" /><p className="text-sm font-bold">Arrange your exams</p></div><div className="space-y-2">{orderedSelected.map((exam, index) => <div key={exam.id} className="flex items-center gap-2 rounded-xl bg-zinc-50 p-2"><span className="w-5 text-center text-xs font-bold text-zinc-400">{index + 1}</span><span className="min-w-0 flex-1 truncate text-xs font-semibold text-zinc-700">{exam.courseName}</span><button type="button" disabled={index === 0} onClick={() => moveExam(exam.id, -1)} className="rounded-lg p-1.5 text-zinc-500 hover:bg-white disabled:opacity-20" aria-label="Move up"><ArrowUp className="h-4 w-4" /></button><button type="button" disabled={index === orderedSelected.length - 1} onClick={() => moveExam(exam.id, 1)} className="rounded-lg p-1.5 text-zinc-500 hover:bg-white disabled:opacity-20" aria-label="Move down"><ArrowDown className="h-4 w-4" /></button></div>)}</div></div>}
               {conflicts.length > 0 && <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900"><AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" /><span>{conflicts.length} time overlap{conflicts.length === 1 ? "" : "s"} detected. They are still included in your timetable; please verify your selected subjects.</span></div>}
               {exportError && <p role="alert" className="rounded-xl bg-red-50 p-3 text-xs text-red-700">{exportError}</p>}
             </section>

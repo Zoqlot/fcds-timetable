@@ -11,7 +11,6 @@ type Props = {
   title: string;
   subtitle: string;
   footer: string;
-  studentName: string;
   canvasRef: RefObject<HTMLCanvasElement | null>;
 };
 
@@ -78,9 +77,7 @@ function drawExamCard(
   compact = false
 ) {
   const c = settings.colors;
-  const radius = settings.cardShape === "square" ? 2
-    : settings.cardShape === "pill" ? Math.min(48, height / 2)
-      : settings.cardRadius;
+  const radius = 20;
 
   if (settings.shadow !== "none") {
     ctx.save();
@@ -126,40 +123,24 @@ function drawExamCard(
   const right = x + width - pad;
   let cursorY = y + pad + (settings.decoration === "top-stripe" ? stripeWidth : 0);
   const available = Math.max(30, right - left);
-  const courseFont = Math.max(13, settings.courseSize * (compact ? 0.82 : 1));
-  const dateFont = Math.max(11, settings.dateSize * (compact ? 0.78 : 1));
-  const timeFont = Math.max(11, settings.timeSize * (compact ? 0.82 : 1));
+  const courseFont = 27;
+  const timeFont = 21;
   const align = settings.textAlign as CanvasTextAlign;
   const textX = align === "center" ? (left + right) / 2 : align === "right" ? right : left;
 
-  if (settings.showDate || settings.showDayName) {
-    const dateText = [
-      settings.showDayName ? dayLabel(exam.date, { weekday: "long" }).toUpperCase() : "",
-      settings.showDate ? dayLabel(exam.date, { month: "short", day: "numeric" }).toUpperCase() : "",
-    ].filter(Boolean).join("  ·  ");
-    cursorY += drawText(ctx, dateText, textX, cursorY, available, "700 " + dateFont + "px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
-  }
+  cursorY += drawText(ctx, dayLabel(exam.date, { weekday: "long" }).toUpperCase(), textX, cursorY,
+    available, "700 21px " + settings.fontFamily, c.date, align, 1) + 3;
+  cursorY += drawText(ctx, dayLabel(exam.date, { month: "long", day: "numeric" }).toUpperCase(), textX, cursorY,
+    available, "700 21px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
 
   const nameHeight = drawText(
     ctx, exam.courseName, textX, cursorY, available,
-    (settings.fontWeight === "normal" ? "400 " : settings.fontWeight === "medium" ? "600 " : "700 ") +
-      courseFont + "px " + settings.fontFamily,
+    "700 " + courseFont + "px " + settings.fontFamily,
     c.cardText, align, compact ? 2 : 3, 1.16
   );
   cursorY += nameHeight + (compact ? 4 : 8);
 
-  if (settings.showCourseCode && exam.courseCode && height > 75) {
-    cursorY += drawText(ctx, exam.courseCode, textX, cursorY, available,
-      "600 " + Math.max(10, dateFont - 2) + "px " + settings.fontFamily,
-      c.secondaryText, align, 1) + (compact ? 3 : 6);
-  }
-  if (settings.showYearLabel && exam.yearLevel && height > 90) {
-    cursorY += drawText(ctx, "YEAR " + exam.yearLevel, textX, cursorY, available,
-      "700 " + Math.max(10, dateFont - 3) + "px " + settings.fontFamily,
-      c.secondaryText, align, 1) + 4;
-  }
-
-  if (settings.showTime) {
+if (settings.showTime) {
     const label = timeLabel(exam.startTime) + " – " + timeLabel(exam.endTime);
     const badgeY = Math.min(y + height - timeFont - pad * 1.55, Math.max(cursorY + 2, y + height - timeFont - pad * 1.5));
     ctx.font = "700 " + timeFont + "px " + settings.fontFamily;
@@ -178,7 +159,7 @@ function drawExamCard(
 
 function renderCanvas(
   canvas: HTMLCanvasElement, exams: MidtermExam[], settings: DesignSettings,
-  title: string, subtitle: string, footer: string, studentName: string
+  title: string, subtitle: string, footer: string
 ) {
   const width = settings.width;
   const height = settings.height;
@@ -195,29 +176,9 @@ function renderCanvas(
   const c = settings.colors;
 
   ctx.fillStyle = c.background;
-  if (settings.backgroundStyle === "gradient") {
-    const gradient = ctx.createLinearGradient(0, 0, W, H);
-    gradient.addColorStop(0, c.background);
-    gradient.addColorStop(1, c.header);
-    ctx.fillStyle = gradient;
-  }
   ctx.fillRect(0, 0, W, H);
 
-  if (settings.backgroundStyle === "pattern") {
-    ctx.save();
-    ctx.globalAlpha = 0.13;
-    ctx.strokeStyle = c.accent;
-    ctx.lineWidth = 1;
-    for (let p = -H; p < W; p += 34) {
-      ctx.beginPath();
-      ctx.moveTo(p, 0);
-      ctx.lineTo(p + H, H);
-      ctx.stroke();
-    }
-    ctx.restore();
-  }
-
-  const margin = Math.min(settings.margins, W * 0.12, H * 0.1);
+  const margin = 50;
   const contentW = W - margin * 2;
   const align = settings.textAlign as CanvasTextAlign;
   const titleX = align === "center" ? W / 2 : align === "right" ? W - margin : margin;
@@ -245,20 +206,18 @@ function renderCanvas(
   drawText(ctx, title || "MY MIDTERM EXAMS", titleX, titleY, contentW,
     "800 " + settings.titleSize + "px " + settings.fontFamily, c.title, align, 2, 1.08);
   drawText(ctx, subtitle, titleX, titleY + settings.titleSize * 1.2 + 8, contentW,
-    "500 19px " + settings.fontFamily, c.subtitle, align, 2);
-  if (studentName.trim()) {
-    drawText(ctx, studentName.trim(), titleX, titleY + settings.titleSize * 1.2 + 40,
-      contentW, "600 17px " + settings.fontFamily, c.secondaryText, align, 1);
-  }
+    "700 19px " + settings.fontFamily, c.subtitle, align, 2);
 
   const ordered = sortExams(exams, settings.order, settings.manualExamOrderIds);
-  const bottomSpace = settings.showFooter ? 74 : margin;
+  const footerTop = H - margin - 94;
   const top = Math.max(headerBottom + 34, titleY + settings.titleSize * 1.2 + 68);
-  const availableH = Math.max(150, H - top - bottomSpace);
-  const gap = settings.spacing === "compact" ? 12 : settings.spacing === "spacious" ? 26 : 18;
+  const availableH = Math.max(120, footerTop - top - 24);
+  const gap = 18;
 
   const drawAgenda = () => {
-    const columns = settings.direction === "horizontal" ? (W > H ? 3 : 2) : 1;
+    const columns = W === H
+      ? ordered.length > 8 ? 3 : ordered.length > 5 ? 2 : 1
+      : ordered.length > 6 ? 2 : 1;
     const cardGap = gap;
     const cardW = (contentW - cardGap * (columns - 1)) / columns;
     const rows = Math.ceil(ordered.length / columns);
@@ -273,7 +232,7 @@ function renderCanvas(
 
   const drawDayCells = (calendar: boolean) => {
     const dates = Array.from(new Set(ordered.map((exam) => exam.date))).sort();
-    const cols = settings.orientation === "landscape" ? (settings.direction === "vertical" ? 3 : 6) : 2;
+    const cols = 2;
     const rows = Math.ceil(dates.length / cols);
     const cellGap = gap;
     const cellW = (contentW - cellGap * (cols - 1)) / cols;
@@ -290,19 +249,7 @@ function renderCanvas(
       ctx.lineWidth = Math.max(1, settings.borderWidth);
       ctx.stroke();
       const examsOfDay = ordered.filter((exam) => exam.date === date);
-      let eventTop = y + 14;
-      if (settings.showDayName) {
-        const dayTitle = dayLabel(date, { weekday: "long" }).toUpperCase();
-        drawText(ctx, dayTitle, x + 14, eventTop, cellW - 28,
-          "800 " + Math.max(12, settings.dateSize) + "px " + settings.fontFamily, c.date, "left", 1);
-        eventTop += Math.max(22, settings.dateSize + 7);
-      }
-      if (settings.showDate) {
-        drawText(ctx, dayLabel(date, { month: "long", day: "numeric" }), x + 14, eventTop,
-          cellW - 28, "500 15px " + settings.fontFamily, c.secondaryText, "left", 1);
-        eventTop += 24;
-      }
-      eventTop += 5;
+      const eventTop = y + 14;
       const innerGap = Math.max(7, gap * 0.55);
       const eventH = Math.max(52, (cellH - (eventTop - y) - 11 - innerGap * Math.max(0, examsOfDay.length - 1)) /
         Math.max(1, examsOfDay.length));
@@ -313,6 +260,11 @@ function renderCanvas(
     });
   };
 
+  // Clip the timetable to its own reserved region; the quote footer is always separate.
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(margin, top, contentW, availableH);
+  ctx.clip();
   if (!ordered.length) {
     drawText(ctx, "Select exams to see your personal timetable.", W / 2, top + 40,
       contentW, "600 24px " + settings.fontFamily, c.secondaryText, "center", 2);
@@ -323,7 +275,7 @@ function renderCanvas(
   } else if (settings.template === "calendar-grid") {
     drawDayCells(true);
   } else {
-    const columns = settings.direction === "vertical" ? (W > H ? 2 : 2) : (W > H ? 4 : 3);
+    const columns = W === H && ordered.length > 8 ? 3 : 2;
     const cardGap = gap;
     const cardW = (contentW - cardGap * (columns - 1)) / columns;
     const rows = Math.ceil(ordered.length / columns);
@@ -336,20 +288,28 @@ function renderCanvas(
     });
   }
 
-  if (settings.showFooter && footer.trim()) {
-    ctx.strokeStyle = c.border;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(margin, H - margin - 42);
-    ctx.lineTo(W - margin, H - margin - 42);
-    ctx.stroke();
-    drawText(ctx, footer, titleX, H - margin - 28, contentW,
-      "600 16px " + settings.fontFamily, c.secondaryText, align, 1);
-  }
+  ctx.restore();
+
+  // Keep a dedicated footer band below the timetable so the quote can never overlap an exam card.
+  ctx.strokeStyle = c.border;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(margin, footerTop);
+  ctx.lineTo(W - margin, footerTop);
+  ctx.stroke();
+  ctx.save();
+  const isArabicFooter = /[\u0600-\u06FF]/.test(footer);
+  ctx.font = "italic 600 19px " + (isArabicFooter ? "Arial" : "Georgia");
+  ctx.fillStyle = c.secondaryText;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.direction = isArabicFooter ? "rtl" : "ltr";
+  ctx.fillText(footer, W / 2, footerTop + 46, contentW);
+  ctx.restore();
 }
 
 export default function TimetableCanvas({
-  exams, settings, title, subtitle, footer, studentName, canvasRef
+  exams, settings, title, subtitle, footer, canvasRef
 }: Props) {
   const internalRef = useRef<HTMLCanvasElement>(null);
   const ref = canvasRef || internalRef;
@@ -357,8 +317,8 @@ export default function TimetableCanvas({
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    renderCanvas(canvas, exams, settings, title, subtitle, footer, studentName);
-  }, [exams, settings, title, subtitle, footer, studentName, ref]);
+    renderCanvas(canvas, exams, settings, title, subtitle, footer);
+  }, [exams, settings, title, subtitle, footer, ref]);
 
   return (
     <canvas

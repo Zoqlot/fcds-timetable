@@ -20,7 +20,6 @@ export type DesignSettings = {
   direction: "vertical" | "horizontal";
   width: number;
   height: number;
-  lockAspectRatio: boolean;
   theme: string;
   colors: ThemeColors;
   cardShape: "square" | "rounded" | "pill";
@@ -41,12 +40,9 @@ export type DesignSettings = {
   margins: number;
   order: "chronological" | "alphabetical" | "manual";
   manualExamOrderIds: string[];
-  showCourseCode: boolean;
   showDate: boolean;
   showDayName: boolean;
   showTime: boolean;
-  showYearLabel: boolean;
-  showFooter: boolean;
   showBrand: boolean;
   quality: number;
 };
@@ -60,18 +56,9 @@ export type MidtermExam = {
   startTime: string;
   endTime: string;
 };
-export type SavedStyle = {
-  id: string;
-  name: string;
-  settings: DesignSettings;
-  createdAt: number;
-};
 export type MidtermPreferences = {
   selectedExamIds: string[];
   settings: DesignSettings;
   title: string;
   subtitle: string;
-  footer: string;
-  studentName: string;
-  savedStyles: SavedStyle[];
 };
