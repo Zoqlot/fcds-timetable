@@ -261,7 +261,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             {([
               ["agenda", "Agenda", ListOrdered],
               ["day-columns", "Day columns", CalendarDays],
-              ["calendar-grid", "Calendar grid", LayoutGrid],
+              ["timetable", "Timetable", CalendarDays],
               ["exam-cards", "Exam cards", BookOpen],
             ] as const).map(([value, label, Icon]) => (
               <button key={value} type="button" onClick={() => update({ template: value })}
