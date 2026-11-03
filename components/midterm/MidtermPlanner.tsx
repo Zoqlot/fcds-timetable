@@ -132,6 +132,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
   const [title, setTitle] = useState("MY MIDTERM EXAMS");
   const [subtitle, setSubtitle] = useState(sessionName.toUpperCase());
   const [footer, setFooter] = useState("Small steps every day lead to big results.");
+  const [customQuote, setCustomQuote] = useState("");
   const [filename, setFilename] = useState("my-midterm-timetable");
   const [undoStack, setUndoStack] = useState<DesignSettings[]>([]);
   const [redoStack, setRedoStack] = useState<DesignSettings[]>([]);
@@ -142,6 +143,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
 
   useEffect(() => {
     const saved = loadPreferences(sessionId);
+    setFooter(getNextMotivationalQuote(sessionId, "Small steps every day lead to big results."));
     if (saved) {
       setSelectedIds((saved.selectedExamIds ?? []).slice(0, 7));
       setSettings(normalizeDesignSettings({ ...DEFAULT_SETTINGS, ...(saved.settings ?? {}), colors: { ...DEFAULT_SETTINGS.colors, ...(saved.settings?.colors ?? {}) } }));
@@ -231,9 +233,6 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     setExportError("");
     setExporting(true);
     try {
-      const quote = getNextMotivationalQuote(sessionId, footer);
-      setFooter(quote);
-      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       await downloadCanvasAsJpg(canvas, { filename, quality: settings.quality });
       setNotice("Your JPG timetable is ready.");
@@ -325,18 +324,54 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     </div>
   );
 
-  const renderContentTab = () => (
-    <div className="space-y-5">
-      <Section title="Text content">
-        <Field label="Main heading / your name">
-          <input className={inputClass} maxLength={60} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Write your name or heading..." />
-        </Field>
-        <Field label="Subtitle">
-          <input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
-        </Field>
-      </Section>
-    </div>
-  );
+  const renderContentTab = () => {
+    const currentQuoteIndex = MOTIVATIONAL_QUOTES.indexOf(footer);
+    const chooseQuote = (direction: -1 | 1) => {
+      const index = currentQuoteIndex < 0
+        ? (direction === 1 ? -1 : 0)
+        : currentQuoteIndex;
+      const nextIndex = (index + direction + MOTIVATIONAL_QUOTES.length) % MOTIVATIONAL_QUOTES.length;
+      setFooter(MOTIVATIONAL_QUOTES[nextIndex]);
+      setCustomQuote("");
+    };
+
+    return (
+      <div className="space-y-5">
+        <Section title="Text content">
+          <Field label="Main heading / your name">
+            <input className={inputClass} maxLength={60} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Write your name or heading..." />
+          </Field>
+          <Field label="Subtitle">
+            <input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
+          </Field>
+        </Section>
+        <Section title="Motivational quote">
+          <div className="rounded-xl border border-violet-100 bg-violet-50/70 p-3">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Live preview quote</p>
+            <p dir="auto" className="mt-2 text-sm font-semibold leading-6 text-violet-900">{footer}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            <button type="button" onClick={() => chooseQuote(-1)} className={secondaryClass}>Previous quote</button>
+            <button type="button" onClick={() => {
+              setFooter(getNextMotivationalQuote(sessionId, footer));
+              setCustomQuote("");
+            }} className={secondaryClass}>Next quote</button>
+          </div>
+          <p className="text-[11px] leading-5 text-zinc-400">Browse all 20 built-in quotes. The live preview and downloaded JPG use the quote shown above.</p>
+          <Field label="Or write your own quote">
+            <textarea className={inputClass + " min-h-[88px] resize-y"} maxLength={180} value={customQuote}
+              onChange={(e) => setCustomQuote(e.target.value)} placeholder="Write a motivational quote..." />
+          </Field>
+          <button type="button" disabled={!customQuote.trim()} onClick={() => setFooter(customQuote.trim())}
+            className={primaryClass + " w-full"}>Use my quote</button>
+          <button type="button" onClick={() => {
+            setFooter(getNextMotivationalQuote(sessionId, footer));
+            setCustomQuote("");
+          }} className="w-full rounded-xl px-3 py-2 text-xs font-semibold text-violet-700 hover:bg-violet-50">Choose a random built-in quote</button>
+        </Section>
+      </div>
+    );
+  };
 
     const renderExportTab = () => (
     <div className="space-y-5">
