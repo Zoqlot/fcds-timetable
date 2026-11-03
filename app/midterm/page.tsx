@@ -7,26 +7,7 @@ export const revalidate = 300;
 export default async function MidtermPage() {
   const { data: session, error } = await supabase
     .from("midterm_exam_sessions")
-    .select(\`
-      id,
-      academic_year,
-      term,
-      display_name,
-      status,
-      created_at,
-      midterm_subjects (
-        id,
-        course_code,
-        course_name,
-        year_level,
-        midterm_exams (
-          id,
-          exam_date,
-          start_time,
-          end_time
-        )
-      )
-    \`)
+    .select("id, academic_year, term, display_name, status, created_at, midterm_subjects ( id, course_code, course_name, year_level, midterm_exams ( id, exam_date, start_time, end_time ) )")
     .eq("status", "published")
     .order("created_at", { ascending: false })
     .limit(1)
