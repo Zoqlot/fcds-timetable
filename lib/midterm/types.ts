@@ -38,7 +38,6 @@ export type DesignSettings = {
   textAlign: "left" | "center" | "right";
   spacing: "compact" | "normal" | "spacious";
   margins: number;
-  groupByDate: boolean;
   order: "chronological" | "alphabetical" | "manual";
   manualExamOrderIds: string[];
   showCourseCode: boolean;

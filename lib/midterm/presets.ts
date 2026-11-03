@@ -36,7 +36,6 @@ export const DEFAULT_SETTINGS: DesignSettings = {
   textAlign: "left",
   spacing: "normal",
   margins: 58,
-  groupByDate: true,
   order: "chronological",
   manualExamOrderIds: [],
   showCourseCode: true,

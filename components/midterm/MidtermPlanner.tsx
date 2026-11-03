@@ -4,8 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CalendarDays, Check, CheckCircle2,
-  ChevronDown, Download, Eye, LayoutGrid, ListOrdered, Loader2, Palette, Plus,
-  RotateCcw, Search, Settings2, Sparkles, WandSparkles, X, AlertTriangle,
+  Download, Eye, LayoutGrid, ListOrdered, Loader2, Palette,
+  RotateCcw, Search, Sparkles, WandSparkles, X, AlertTriangle,
   BookOpen, Image as ImageIcon, Type, SlidersHorizontal, Save, Trash2, Undo2, Redo2
 } from "lucide-react";
 import type { DesignSettings, MidtermExam, MidtermPreferences, SavedStyle, ThemeColors } from "@/lib/midterm/types";
@@ -310,7 +310,6 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
         <Field label="Exam order"><select className={inputClass} value={settings.order} onChange={(e) => update({ order: e.target.value as DesignSettings["order"] })}>
           <option value="chronological">Chronological</option><option value="alphabetical">Alphabetical</option><option value="manual">My manual order</option>
         </select></Field>
-        <Toggle label="Group exams by date" checked={settings.groupByDate} onChange={(value) => update({ groupByDate: value })} />
       </Section>
     </div>
   );

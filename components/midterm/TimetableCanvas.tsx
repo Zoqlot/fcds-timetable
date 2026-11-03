@@ -288,14 +288,21 @@ function renderCanvas(
       ctx.lineWidth = Math.max(1, settings.borderWidth);
       ctx.stroke();
       const examsOfDay = ordered.filter((exam) => exam.date === date);
-      const dayTitle = dayLabel(date, { weekday: "long" }).toUpperCase();
-      drawText(ctx, dayTitle, x + 14, y + 14, cellW - 28,
-        "800 " + Math.max(12, settings.dateSize) + "px " + settings.fontFamily, c.date, "left", 1);
-      drawText(ctx, dayLabel(date, { month: "long", day: "numeric" }), x + 14, y + 38,
-        cellW - 28, "500 15px " + settings.fontFamily, c.secondaryText, "left", 1);
+      let eventTop = y + 14;
+      if (settings.showDayName) {
+        const dayTitle = dayLabel(date, { weekday: "long" }).toUpperCase();
+        drawText(ctx, dayTitle, x + 14, eventTop, cellW - 28,
+          "800 " + Math.max(12, settings.dateSize) + "px " + settings.fontFamily, c.date, "left", 1);
+        eventTop += Math.max(22, settings.dateSize + 7);
+      }
+      if (settings.showDate) {
+        drawText(ctx, dayLabel(date, { month: "long", day: "numeric" }), x + 14, eventTop,
+          cellW - 28, "500 15px " + settings.fontFamily, c.secondaryText, "left", 1);
+        eventTop += 24;
+      }
+      eventTop += 5;
       const innerGap = Math.max(7, gap * 0.55);
-      const eventTop = y + 67;
-      const eventH = Math.max(52, (cellH - 78 - innerGap * Math.max(0, examsOfDay.length - 1)) /
+      const eventH = Math.max(52, (cellH - (eventTop - y) - 11 - innerGap * Math.max(0, examsOfDay.length - 1)) /
         Math.max(1, examsOfDay.length));
       examsOfDay.forEach((exam, eventIndex) => {
         drawExamCard(ctx, exam, x + 9, eventTop + eventIndex * (eventH + innerGap),
