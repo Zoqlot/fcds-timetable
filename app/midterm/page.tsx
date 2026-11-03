@@ -4,6 +4,13 @@ import type { MidtermExam } from "@/lib/midterm/types";
 
 export const revalidate = 300;
 
+type RelatedExam = {
+  id: string;
+  exam_date: string;
+  start_time: string;
+  end_time: string;
+};
+
 export default async function MidtermPage() {
   const { data: session, error } = await supabase
     .from("midterm_exam_sessions")
@@ -35,17 +42,17 @@ export default async function MidtermPage() {
       course_code: string;
       course_name: string;
       year_level: number | null;
-      midterm_exams: {
-        id: string;
-        exam_date: string;
-        start_time: string;
-        end_time: string;
-      }[];
-    }[];
+      midterm_exams: RelatedExam | RelatedExam[] | null;
+    }[] | null;
   };
 
-  const exams: MidtermExam[] = (rawSession.midterm_subjects ?? []).flatMap((subject) =>
-    (subject.midterm_exams ?? []).map((exam) => ({
+  // Supabase can return a one-to-one relationship as an object and a
+  // one-to-many relationship as an array. Normalize both shapes before mapping.
+  const exams: MidtermExam[] = (rawSession.midterm_subjects ?? []).flatMap((subject) => {
+    const related = subject.midterm_exams;
+    const subjectExams = Array.isArray(related) ? related : related ? [related] : [];
+
+    return subjectExams.map((exam) => ({
       id: exam.id,
       subjectId: subject.id,
       courseCode: subject.course_code ?? "",
@@ -54,8 +61,8 @@ export default async function MidtermPage() {
       date: String(exam.exam_date).slice(0, 10),
       startTime: String(exam.start_time).slice(0, 5),
       endTime: String(exam.end_time).slice(0, 5),
-    }))
-  );
+    }));
+  });
 
   exams.sort((a, b) =>
     a.date.localeCompare(b.date) ||
