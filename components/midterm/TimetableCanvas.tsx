@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type { RefObject } from "react";
 import type { DesignSettings, MidtermExam } from "@/lib/midterm/types";
 import { dayLabel, timeLabel, sortExams } from "@/lib/midterm/conflicts";
 
@@ -11,7 +12,7 @@ type Props = {
   subtitle: string;
   footer: string;
   studentName: string;
-  canvasRef: React.RefObject<HTMLCanvasElement | null>;
+  canvasRef: RefObject<HTMLCanvasElement | null>;
 };
 
 function roundedRect(

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUp, CalendarDays, Check, CheckCircle2,
@@ -58,11 +59,11 @@ function Toggle({ label, checked, onChange }: { label: string; checked: boolean;
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, children }: { label: string; children: ReactNode }) {
   return <label className="block space-y-1.5"><span className="text-xs font-semibold text-zinc-500">{label}</span>{children}</label>;
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return <section className="space-y-3 border-b border-zinc-100 pb-4 last:border-0 last:pb-0"><h3 className="text-xs font-black uppercase tracking-wider text-zinc-400">{title}</h3>{children}</section>;
 }
 
