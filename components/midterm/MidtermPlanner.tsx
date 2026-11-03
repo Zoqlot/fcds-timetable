@@ -503,7 +503,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
           </aside>
         </div>
       ) : (
-        <div className="mx-auto max-w-[1600px] px-3 py-4 sm:px-5 lg:px-6">
+        <div className="mx-auto max-w-[1600px] px-3 py-4 pb-24 sm:px-5 sm:pb-5 lg:px-6">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <div><button type="button" onClick={() => setStep("select")} className="mb-1 inline-flex items-center gap-1 text-xs font-semibold text-violet-700 hover:text-violet-900"><ArrowLeft className="h-3.5 w-3.5" />Back to subjects</button><h1 className="text-xl font-black tracking-tight">Make it yours.</h1><p className="text-xs text-zinc-500">{selectedExams.length} exams selected · Changes update your preview instantly.</p></div>
             <div className="flex flex-wrap items-center gap-2">
@@ -519,7 +519,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
               <div className="grid grid-cols-4 border-b border-zinc-100">
                 {tabItems.map(({ id, label, icon: Icon }) => <button key={id} type="button" onClick={() => setActiveTab(id)} className={"flex min-w-0 flex-col items-center gap-1 px-1 py-3 text-[10px] font-semibold " + (activeTab === id ? "border-b-2 border-violet-600 bg-violet-50/50 text-violet-700" : "text-zinc-400 hover:bg-zinc-50 hover:text-zinc-700")}><Icon className="h-4 w-4" /><span>{label}</span></button>)}
               </div>
-              <div className="max-h-[calc(100vh-230px)] space-y-5 overflow-y-auto p-4">
+              <div className="space-y-5 p-4 xl:max-h-[calc(100vh-230px)] xl:overflow-y-auto">
                 {renderActiveTab()}
               </div>
             </aside>
@@ -529,8 +529,8 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
                 <div className="flex items-center gap-2"><Eye className="h-4 w-4 text-violet-600" /><div><p className="text-sm font-bold">Live preview</p><p className="text-[11px] text-zinc-400">What you see here is what gets downloaded.</p></div></div>
                 <div className="flex items-center gap-2 text-[11px] font-semibold text-zinc-500">{settings.width} × {settings.height} px <span className="rounded-full bg-emerald-50 px-2 py-1 text-emerald-700">JPG</span></div>
               </div>
-              <div className="rounded-2xl border border-zinc-200 bg-[#e9e9ee] p-3 shadow-inner sm:p-6">
-                <div className="mx-auto w-full" style={{ maxWidth: settings.width > settings.height ? "1200px" : "760px" }}>
+              <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-[#e9e9ee] p-3 shadow-inner sm:p-6">
+                <div className={"mx-auto w-full " + (settings.template === "timetable" ? "min-w-[560px] sm:min-w-0" : "")} style={{ maxWidth: settings.width > settings.height ? "1200px" : "760px" }}>
                   <TimetableCanvas canvasRef={canvasRef} exams={orderedSelected} settings={settings} title={title} subtitle={subtitle} footer={footer} />
                 </div>
               </div>
