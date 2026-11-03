@@ -65,7 +65,7 @@ function drawText(
   ctx.textAlign = align;
   ctx.textBaseline = "top";
   const lines = wrapText(ctx, text, maxWidth, maxLines);
-  const fontSize = Number(font.match(/([\\d.]+)px/)?.[1] ?? 16);
+  const fontSize = Number(font.match(/([\d.]+)px/)?.[1] ?? 16);
   lines.forEach((line, index) => ctx.fillText(line, x, y + index * fontSize * lineHeight, maxWidth));
   return lines.length * fontSize * lineHeight;
 }
