@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   ArrowLeft, ArrowRight, CalendarDays, Check, CheckCircle2, Download, Eye,
-  LayoutGrid, Loader2, Palette, RotateCcw, Search, Sparkles, WandSparkles, X,
+  LayoutGrid, ListOrdered, Loader2, Palette, RotateCcw, Search, Sparkles, WandSparkles, X,
   AlertTriangle, BookOpen, Image as ImageIcon, Type, Undo2, Redo2
 } from "lucide-react";
 import type { DesignSettings, MidtermExam, MidtermPreferences, ThemeColors } from "@/lib/midterm/types";

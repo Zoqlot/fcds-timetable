@@ -118,10 +118,14 @@ function drawExamCard(
     ctx.restore();
   }
 
+  ctx.save();
+  roundedRect(ctx, x, y, width, height, radius);
+  ctx.clip();
+
   const pad = compact ? 12 : 20;
-  const left = x + pad + (settings.decoration === "left-stripe" ? stripeWidth : 0);
+  const left = x + pad + stripeWidth;
   const right = x + width - pad;
-  let cursorY = y + pad + (settings.decoration === "top-stripe" ? stripeWidth : 0);
+  let cursorY = y + pad;
   const available = Math.max(30, right - left);
   const courseFont = 27;
   const timeFont = 21;
@@ -133,16 +137,18 @@ function drawExamCard(
   cursorY += drawText(ctx, dayLabel(exam.date, { month: "long", day: "numeric" }).toUpperCase(), textX, cursorY,
     available, "700 21px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
 
+  const badgeY = y + height - timeFont - pad * 1.5;
+  const availableCourseHeight = Math.max(27, badgeY - cursorY - 8);
+  const maxCourseLines = Math.max(1, Math.min(compact ? 2 : 3, Math.floor(availableCourseHeight / (courseFont * 1.16))));
   const nameHeight = drawText(
     ctx, exam.courseName, textX, cursorY, available,
     "700 " + courseFont + "px " + settings.fontFamily,
-    c.cardText, align, compact ? 2 : 3, 1.16
+    c.cardText, align, maxCourseLines, 1.16
   );
   cursorY += nameHeight + (compact ? 4 : 8);
 
 if (settings.showTime) {
     const label = timeLabel(exam.startTime) + " – " + timeLabel(exam.endTime);
-    const badgeY = Math.min(y + height - timeFont - pad * 1.55, Math.max(cursorY + 2, y + height - timeFont - pad * 1.5));
     ctx.font = "700 " + timeFont + "px " + settings.fontFamily;
     const badgeWidth = Math.min(available, ctx.measureText(label).width + (compact ? 18 : 28));
     const badgeX = align === "center" ? textX - badgeWidth / 2 : align === "right" ? right - badgeWidth : left;
@@ -155,6 +161,7 @@ if (settings.showTime) {
     ctx.textBaseline = "middle";
     ctx.fillText(label, badgeX + badgeWidth / 2, badgeY + badgeHeight / 2, badgeWidth - 8);
   }
+  ctx.restore();
 }
 
 function renderCanvas(
@@ -226,7 +233,7 @@ function renderCanvas(
       const col = index % columns;
       const row = Math.floor(index / columns);
       drawExamCard(ctx, exam, margin + col * (cardW + cardGap), top + row * (cardH + cardGap),
-        cardW, Math.min(cardH, 250), settings, cardH < 130);
+        cardW, Math.min(cardH, 250), settings, cardH < 190);
     });
   };
 
@@ -284,7 +291,7 @@ function renderCanvas(
       const col = index % columns;
       const row = Math.floor(index / columns);
       drawExamCard(ctx, exam, margin + col * (cardW + cardGap), top + row * (cardH + cardGap),
-        cardW, Math.min(cardH, 240), settings, cardH < 145);
+        cardW, Math.min(cardH, 240), settings, cardH < 190);
     });
   }
 
