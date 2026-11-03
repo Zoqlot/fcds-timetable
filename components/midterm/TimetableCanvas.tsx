@@ -254,7 +254,7 @@ function renderCanvas(
     const last = toDate(ordered[ordered.length - 1].date);
     const dates: string[] = [];
     for (const d = new Date(first); d <= last; d.setUTCDate(d.getUTCDate() + 1)) dates.push(d.toISOString().slice(0, 10));
-    const slots = Array.from(new Map(ordered.map((e) => [e.startTime + "|" + e.endTime, { start: e.startTime, end: e.endTime }])).values())
+    const slots = Array.from(new Map<string, { start: string; end: string }>(ordered.map((e) => [e.startTime + "|" + e.endTime, { start: e.startTime, end: e.endTime }] as const)).values())
       .sort((a, b) => a.start.localeCompare(b.start));
     const clock = (value: string) => {
       const [hh, mm] = value.split(":").map(Number);
