@@ -14,10 +14,10 @@ export const THEMES: { id: string; name: string; colors: ThemeColors }[] = [
 
 export const DEFAULT_SETTINGS: DesignSettings = {
   template: "agenda",
-  orientation: "square",
+  orientation: "portrait",
   direction: "vertical",
-  width: 1080,
-  height: 1080,
+  width: 2480,
+  height: 3508,
   theme: "violet",
   colors: THEMES[0].colors,
   cardShape: "rounded",
@@ -46,18 +46,16 @@ export const DEFAULT_SETTINGS: DesignSettings = {
 };
 
 export const SIZE_PRESETS = [
-  { id: "square", label: "Square", width: 1080, height: 1080, orientation: "square" as const },
   { id: "a4-portrait", label: "A4 Portrait", width: 2480, height: 3508, orientation: "portrait" as const },
 ];
 
 export function normalizeDesignSettings(settings: DesignSettings): DesignSettings {
-  const isA4Portrait = settings.width === 2480 && settings.height === 3508;
   return {
     ...settings,
-    orientation: isA4Portrait ? "portrait" : "square",
+    orientation: "portrait",
     direction: "vertical",
-    width: isA4Portrait ? 2480 : 1080,
-    height: isA4Portrait ? 3508 : 1080,
+    width: 2480,
+    height: 3508,
     cardShape: "rounded",
     cardRadius: 20,
     borderWidth: 4,
