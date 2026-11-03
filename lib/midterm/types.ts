@@ -1,4 +1,4 @@
-export type ExamTemplate = "agenda" | "day-columns" | "calendar-grid" | "exam-cards";
+export type ExamTemplate = "agenda" | "day-columns" | "timetable" | "exam-cards";
 export type Orientation = "portrait" | "landscape" | "square" | "custom";
 export type ThemeColors = {
   background: string;
