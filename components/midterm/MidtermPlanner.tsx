@@ -75,6 +75,50 @@ const MOTIVATIONAL_QUOTES = [
   "ابدأ بثقة، وأكمل بإصرار.",
   "وراء كل إنجاز صبر واجتهاد.",
 ];
+const QUOTE_DECK_KEY = (sessionId: string) => "fcds-midterm-quotes:" + sessionId + ":v1";
+
+// Draw from a shuffled deck: every quote is used once before the deck reshuffles.
+function getNextMotivationalQuote(sessionId: string, currentQuote: string) {
+  let remaining: string[] = [];
+  let lastQuote = "";
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(QUOTE_DECK_KEY(sessionId)) ?? "{}") as {
+      remaining?: string[];
+      lastQuote?: string;
+    };
+    remaining = Array.isArray(saved.remaining)
+      ? saved.remaining.filter((quote) => MOTIVATIONAL_QUOTES.includes(quote))
+      : [];
+    lastQuote = typeof saved.lastQuote === "string" ? saved.lastQuote : "";
+  } catch {
+    // Continue with a fresh shuffled deck if storage is unavailable or invalid.
+  }
+
+  if (!remaining.length) {
+    remaining = [...MOTIVATIONAL_QUOTES];
+    for (let i = remaining.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+    }
+    const previous = lastQuote || currentQuote;
+    if (remaining[0] === previous) {
+      const swapIndex = 1 + Math.floor(Math.random() * (remaining.length - 1));
+      [remaining[0], remaining[swapIndex]] = [remaining[swapIndex], remaining[0]];
+    }
+  }
+
+  const nextQuote = remaining.shift() ?? MOTIVATIONAL_QUOTES[0];
+  try {
+    window.localStorage.setItem(QUOTE_DECK_KEY(sessionId), JSON.stringify({
+      remaining,
+      lastQuote: nextQuote,
+    }));
+  } catch {
+    // Quote selection still works when browser storage is unavailable.
+  }
+  return nextQuote;
+}
+
 
 export default function MidtermPlanner({ sessionId, sessionName, exams }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -127,8 +171,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     const q = query.trim().toLowerCase();
     return exams.filter((exam) => {
       const matchesQuery = !q || exam.courseName.toLowerCase().includes(q) || exam.courseCode.toLowerCase().includes(q);
-      const matchesYear = yearFilter === "all" ||
-        (yearFilter === "other" ? !exam.yearLevel : String(exam.yearLevel) === yearFilter);
+      const matchesYear = yearFilter === "all" || String(exam.yearLevel) === yearFilter;
       const matchesDay = dayFilter === "all" || exam.date === dayFilter;
       return matchesQuery && matchesYear && matchesDay;
     }).sort((a, b) => a.date.localeCompare(b.date) || a.startTime.localeCompare(b.startTime) || a.courseName.localeCompare(b.courseName));
@@ -188,8 +231,7 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     setExportError("");
     setExporting(true);
     try {
-      const availableQuotes = MOTIVATIONAL_QUOTES.filter((item) => item !== footer);
-      const quote = availableQuotes[Math.floor(Math.random() * availableQuotes.length)];
+      const quote = getNextMotivationalQuote(sessionId, footer);
       setFooter(quote);
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
@@ -210,7 +252,6 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
     { value: "2", label: "Year 2" },
     { value: "3", label: "Year 3" },
     { value: "4", label: "Year 4" },
-    { value: "other", label: "Shared / Other" },
   ];
 
   const renderLayoutTab = () => (
