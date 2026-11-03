@@ -345,6 +345,31 @@ export default function MidtermPlanner({ sessionId, sessionName, exams }: Props)
             <input className={inputClass} maxLength={90} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
           </Field>
         </Section>
+        <Section title="Typography">
+          <Field label={`Font family · ${settings.fontFamily}`}>
+            <select className={inputClass} value={settings.fontFamily} onChange={(e) => update({ fontFamily: e.target.value })}>
+              <option value="Arial">Arial</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Tahoma">Tahoma</option>
+              <option value="Trebuchet MS">Trebuchet MS</option>
+              <option value="Times New Roman">Times New Roman</option>
+            </select>
+          </Field>
+          <Field label={`Heading size · ${settings.titleSize}px`}>
+            <input className="w-full accent-violet-600" type="range" min="28" max="76" step="1" value={settings.titleSize} onChange={(e) => update({ titleSize: Number(e.target.value) })} />
+          </Field>
+          <Field label={`Course name size · ${settings.courseSize}px`}>
+            <input className="w-full accent-violet-600" type="range" min="16" max="42" step="1" value={settings.courseSize} onChange={(e) => update({ courseSize: Number(e.target.value) })} />
+          </Field>
+          <Field label={`Date size · ${settings.dateSize}px`}>
+            <input className="w-full accent-violet-600" type="range" min="12" max="32" step="1" value={settings.dateSize} onChange={(e) => update({ dateSize: Number(e.target.value) })} />
+          </Field>
+          <Field label={`Exam time size · ${settings.timeSize}px`}>
+            <input className="w-full accent-violet-600" type="range" min="12" max="32" step="1" value={settings.timeSize} onChange={(e) => update({ timeSize: Number(e.target.value) })} />
+          </Field>
+          <p className="text-[11px] leading-5 text-zinc-400">Changes update the live preview immediately and are included in the downloaded JPG.</p>
+        </Section>
         <Section title="Motivational quote">
           <div className="rounded-xl border border-violet-100 bg-violet-50/70 p-3">
             <p className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Live preview quote</p>
