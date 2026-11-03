@@ -74,7 +74,8 @@ function drawExamCard(
   exam: MidtermExam,
   x: number, y: number, width: number, height: number,
   settings: DesignSettings,
-  compact = false
+  compact = false,
+  condensedDate = false
 ) {
   const c = settings.colors;
   const radius = 20;
@@ -122,7 +123,7 @@ function drawExamCard(
   roundedRect(ctx, x, y, width, height, radius);
   ctx.clip();
 
-  const pad = compact ? 12 : 20;
+  const pad = condensedDate ? 7 : compact ? 12 : 20;
   const left = x + pad + stripeWidth;
   const right = x + width - pad;
   let cursorY = y + pad;
@@ -132,10 +133,17 @@ function drawExamCard(
   const align = settings.textAlign as CanvasTextAlign;
   const textX = align === "center" ? (left + right) / 2 : align === "right" ? right : left;
 
-  cursorY += drawText(ctx, dayLabel(exam.date, { weekday: "long" }).toUpperCase(), textX, cursorY,
-    available, "700 21px " + settings.fontFamily, c.date, align, 1) + 3;
-  cursorY += drawText(ctx, dayLabel(exam.date, { month: "long", day: "numeric" }).toUpperCase(), textX, cursorY,
-    available, "700 21px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
+  if (condensedDate) {
+    const dateLabel = dayLabel(exam.date, { weekday: "long" }).toUpperCase() + " · " +
+      dayLabel(exam.date, { month: "short", day: "numeric" }).toUpperCase();
+    cursorY += drawText(ctx, dateLabel, textX, cursorY, available,
+      "700 21px " + settings.fontFamily, c.date, align, 1) + 2;
+  } else {
+    cursorY += drawText(ctx, dayLabel(exam.date, { weekday: "long" }).toUpperCase(), textX, cursorY,
+      available, "700 21px " + settings.fontFamily, c.date, align, 1) + 3;
+    cursorY += drawText(ctx, dayLabel(exam.date, { month: "long", day: "numeric" }).toUpperCase(), textX, cursorY,
+      available, "700 21px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
+  }
 
   const badgeY = y + height - timeFont - pad * 1.5;
   const availableCourseHeight = Math.max(27, badgeY - cursorY - 8);
@@ -222,18 +230,15 @@ function renderCanvas(
   const gap = 18;
 
   const drawAgenda = () => {
-    const columns = W === H
-      ? ordered.length > 8 ? 3 : ordered.length > 5 ? 2 : 1
-      : ordered.length > 6 ? 2 : 1;
-    const cardGap = gap;
-    const cardW = (contentW - cardGap * (columns - 1)) / columns;
-    const rows = Math.ceil(ordered.length / columns);
-    const cardH = Math.max(70, (availableH - cardGap * Math.max(0, rows - 1)) / Math.max(1, rows));
+    // Agenda is deliberately one full-width subject per row at every page size.
+    // Seven square-page cards use a condensed date line to preserve readable fixed typography.
+    const condensed = W === H && ordered.length >= 7;
+    const cardGap = condensed ? 8 : gap;
+    const cardW = contentW;
+    const cardH = (availableH - cardGap * Math.max(0, ordered.length - 1)) / Math.max(1, ordered.length);
     ordered.forEach((exam, index) => {
-      const col = index % columns;
-      const row = Math.floor(index / columns);
-      drawExamCard(ctx, exam, margin + col * (cardW + cardGap), top + row * (cardH + cardGap),
-        cardW, Math.min(cardH, 250), settings, cardH < 190);
+      drawExamCard(ctx, exam, margin, top + index * (cardH + cardGap),
+        cardW, cardH, settings, condensed || cardH < 190, condensed);
     });
   };
 
@@ -258,11 +263,11 @@ function renderCanvas(
       const examsOfDay = ordered.filter((exam) => exam.date === date);
       const eventTop = y + 14;
       const innerGap = Math.max(7, gap * 0.55);
-      const eventH = Math.max(52, (cellH - (eventTop - y) - 11 - innerGap * Math.max(0, examsOfDay.length - 1)) /
+      const eventH = Math.max(1, (cellH - (eventTop - y) - 11 - innerGap * Math.max(0, examsOfDay.length - 1)) /
         Math.max(1, examsOfDay.length));
       examsOfDay.forEach((exam, eventIndex) => {
         drawExamCard(ctx, exam, x + 9, eventTop + eventIndex * (eventH + innerGap),
-          cellW - 18, Math.min(eventH, 150), settings, true);
+          cellW - 18, eventH, settings, true);
       });
     });
   };
@@ -282,16 +287,16 @@ function renderCanvas(
   } else if (settings.template === "calendar-grid") {
     drawDayCells(true);
   } else {
-    const columns = W === H && ordered.length > 8 ? 3 : 2;
+    const columns = 2;
     const cardGap = gap;
     const cardW = (contentW - cardGap * (columns - 1)) / columns;
     const rows = Math.ceil(ordered.length / columns);
-    const cardH = Math.max(90, (availableH - cardGap * Math.max(0, rows - 1)) / Math.max(1, rows));
+    const cardH = (availableH - cardGap * Math.max(0, rows - 1)) / Math.max(1, rows);
     ordered.forEach((exam, index) => {
       const col = index % columns;
       const row = Math.floor(index / columns);
       drawExamCard(ctx, exam, margin + col * (cardW + cardGap), top + row * (cardH + cardGap),
-        cardW, Math.min(cardH, 240), settings, cardH < 190);
+        cardW, cardH, settings, cardH < 190);
     });
   }
 
