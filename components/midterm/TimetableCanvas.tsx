@@ -128,8 +128,9 @@ function drawExamCard(
   const right = x + width - pad;
   let cursorY = y + pad;
   const available = Math.max(30, right - left);
-  const courseFont = 27;
-  const timeFont = 21;
+  const courseFont = settings.courseSize;
+  const timeFont = settings.timeSize;
+  const dateFont = settings.dateSize;
   const align = settings.textAlign as CanvasTextAlign;
   const textX = align === "center" ? (left + right) / 2 : align === "right" ? right : left;
 
@@ -137,12 +138,12 @@ function drawExamCard(
     const dateLabel = dayLabel(exam.date, { weekday: "long" }).toUpperCase() + " · " +
       dayLabel(exam.date, { month: "short", day: "numeric" }).toUpperCase();
     cursorY += drawText(ctx, dateLabel, textX, cursorY, available,
-      "700 21px " + settings.fontFamily, c.date, align, 1) + 2;
+      "700 " + dateFont + "px " + settings.fontFamily, c.date, align, 1) + 2;
   } else {
     cursorY += drawText(ctx, dayLabel(exam.date, { weekday: "long" }).toUpperCase(), textX, cursorY,
-      available, "700 21px " + settings.fontFamily, c.date, align, 1) + 3;
+      available, "700 " + dateFont + "px " + settings.fontFamily, c.date, align, 1) + 3;
     cursorY += drawText(ctx, dayLabel(exam.date, { month: "long", day: "numeric" }).toUpperCase(), textX, cursorY,
-      available, "700 21px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
+      available, "700 " + dateFont + "px " + settings.fontFamily, c.date, align, 1) + (compact ? 5 : 9);
   }
 
   const badgeY = y + height - timeFont - pad * 1.5;
